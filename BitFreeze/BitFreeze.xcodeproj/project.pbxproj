@@ -7,75 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A5E856A1CD9163000B9AE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85691CD9163000B9AE16 /* AppDelegate.swift */; };
-		2A5E856C1CD9163000B9AE16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E856B1CD9163000B9AE16 /* ViewController.swift */; };
-		2A5E856F1CD9163000B9AE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5E856D1CD9163000B9AE16 /* Main.storyboard */; };
-		2A5E85711CD9163000B9AE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5E85701CD9163000B9AE16 /* Assets.xcassets */; };
-		2A5E85741CD9163000B9AE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5E85721CD9163000B9AE16 /* LaunchScreen.storyboard */; };
-		2A5E857F1CD9163000B9AE16 /* BitFreezeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E857E1CD9163000B9AE16 /* BitFreezeTests.swift */; };
-		2A5E858A1CD9163000B9AE16 /* BitFreezeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85891CD9163000B9AE16 /* BitFreezeUITests.swift */; };
-		2A5E858F1CD9163000B9AE16 /* BitFreeze WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2A5E858E1CD9163000B9AE16 /* BitFreeze WatchKit App.app */; };
-		2A5E85951CD9163000B9AE16 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5E85931CD9163000B9AE16 /* Interface.storyboard */; };
-		2A5E85971CD9163000B9AE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5E85961CD9163000B9AE16 /* Assets.xcassets */; };
-		2A5E859E1CD9163000B9AE16 /* BitFreeze WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5E859D1CD9163000B9AE16 /* BitFreeze WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A5E85A51CD9163000B9AE16 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85A41CD9163000B9AE16 /* InterfaceController.swift */; };
-		2A5E85A71CD9163000B9AE16 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85A61CD9163000B9AE16 /* ExtensionDelegate.swift */; };
-		2A5E85A91CD9163000B9AE16 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85A81CD9163000B9AE16 /* NotificationController.swift */; };
-		2A5E85AB1CD9163000B9AE16 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85AA1CD9163000B9AE16 /* GlanceController.swift */; };
-		2A5E85AD1CD9163000B9AE16 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E85AC1CD9163000B9AE16 /* ComplicationController.swift */; };
-		2A5E85AF1CD9163100B9AE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5E85AE1CD9163100B9AE16 /* Assets.xcassets */; };
+		2AE6A7EF1CD9177400510A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A7EE1CD9177400510A6D /* AppDelegate.swift */; };
+		2AE6A7F11CD9177400510A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A7F01CD9177400510A6D /* ViewController.swift */; };
+		2AE6A7F41CD9177400510A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6A7F21CD9177400510A6D /* Main.storyboard */; };
+		2AE6A7F61CD9177400510A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6A7F51CD9177400510A6D /* Assets.xcassets */; };
+		2AE6A7F91CD9177400510A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6A7F71CD9177400510A6D /* LaunchScreen.storyboard */; };
+		2AE6A7FE1CD9177400510A6D /* BitFreeze WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AE6A7FD1CD9177400510A6D /* BitFreeze WatchKit App.app */; };
+		2AE6A8041CD9177400510A6D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6A8021CD9177400510A6D /* Interface.storyboard */; };
+		2AE6A8061CD9177400510A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6A8051CD9177400510A6D /* Assets.xcassets */; };
+		2AE6A80D1CD9177400510A6D /* BitFreeze WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AE6A80C1CD9177400510A6D /* BitFreeze WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AE6A8141CD9177400510A6D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A8131CD9177400510A6D /* InterfaceController.swift */; };
+		2AE6A8161CD9177400510A6D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A8151CD9177400510A6D /* ExtensionDelegate.swift */; };
+		2AE6A8181CD9177400510A6D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A8171CD9177400510A6D /* NotificationController.swift */; };
+		2AE6A81A1CD9177400510A6D /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A8191CD9177400510A6D /* GlanceController.swift */; };
+		2AE6A81C1CD9177400510A6D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6A81B1CD9177400510A6D /* ComplicationController.swift */; };
+		2AE6A81E1CD9177400510A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6A81D1CD9177400510A6D /* Assets.xcassets */; };
+		44E9627E831E32F7FF695B5C /* Pods_BitFreeze_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170EE78B28161A41AD892FBB /* Pods_BitFreeze_WatchKit_App.framework */; };
+		A8B5C5575AAFE075C37B7E7C /* Pods_BitFreeze_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE03524BCB52F588677EA2 /* Pods_BitFreeze_WatchKit_Extension.framework */; };
+		BC578887E6F393D7D4DED702 /* Pods_BitFreeze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C67432A3C58F2D88AC2C46 /* Pods_BitFreeze.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A5E857B1CD9163000B9AE16 /* PBXContainerItemProxy */ = {
+		2AE6A7FF1CD9177400510A6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2A5E855E1CD9163000B9AE16 /* Project object */;
+			containerPortal = 2AE6A7E31CD9177400510A6D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2A5E85651CD9163000B9AE16;
-			remoteInfo = BitFreeze;
-		};
-		2A5E85861CD9163000B9AE16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A5E855E1CD9163000B9AE16 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A5E85651CD9163000B9AE16;
-			remoteInfo = BitFreeze;
-		};
-		2A5E85901CD9163000B9AE16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A5E855E1CD9163000B9AE16 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A5E858D1CD9163000B9AE16;
+			remoteGlobalIDString = 2AE6A7FC1CD9177400510A6D;
 			remoteInfo = "BitFreeze WatchKit App";
 		};
-		2A5E859F1CD9163000B9AE16 /* PBXContainerItemProxy */ = {
+		2AE6A80E1CD9177400510A6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2A5E855E1CD9163000B9AE16 /* Project object */;
+			containerPortal = 2AE6A7E31CD9177400510A6D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2A5E859C1CD9163000B9AE16;
+			remoteGlobalIDString = 2AE6A80B1CD9177400510A6D;
 			remoteInfo = "BitFreeze WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2A5E85B61CD9163100B9AE16 /* Embed App Extensions */ = {
+		2AE6A8251CD9177400510A6D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2A5E859E1CD9163000B9AE16 /* BitFreeze WatchKit Extension.appex in Embed App Extensions */,
+				2AE6A80D1CD9177400510A6D /* BitFreeze WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A5E85BA1CD9163100B9AE16 /* Embed Watch Content */ = {
+		2AE6A8291CD9177400510A6D /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2A5E858F1CD9163000B9AE16 /* BitFreeze WatchKit App.app in Embed Watch Content */,
+				2AE6A7FE1CD9177400510A6D /* BitFreeze WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,236 +70,211 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2A5E85661CD9163000B9AE16 /* BitFreeze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitFreeze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A5E85691CD9163000B9AE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A5E856B1CD9163000B9AE16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A5E856E1CD9163000B9AE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A5E85701CD9163000B9AE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A5E85731CD9163000B9AE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2A5E85751CD9163000B9AE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A5E857A1CD9163000B9AE16 /* BitFreezeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitFreezeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A5E857E1CD9163000B9AE16 /* BitFreezeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitFreezeTests.swift; sourceTree = "<group>"; };
-		2A5E85801CD9163000B9AE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A5E85851CD9163000B9AE16 /* BitFreezeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitFreezeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A5E85891CD9163000B9AE16 /* BitFreezeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitFreezeUITests.swift; sourceTree = "<group>"; };
-		2A5E858B1CD9163000B9AE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A5E858E1CD9163000B9AE16 /* BitFreeze WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitFreeze WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A5E85941CD9163000B9AE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		2A5E85961CD9163000B9AE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A5E85981CD9163000B9AE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A5E859D1CD9163000B9AE16 /* BitFreeze WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitFreeze WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A5E85A31CD9163000B9AE16 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		2A5E85A41CD9163000B9AE16 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		2A5E85A61CD9163000B9AE16 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		2A5E85A81CD9163000B9AE16 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		2A5E85AA1CD9163000B9AE16 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
-		2A5E85AC1CD9163000B9AE16 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		2A5E85AE1CD9163100B9AE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A5E85B01CD9163100B9AE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170EE78B28161A41AD892FBB /* Pods_BitFreeze_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		241AA123747568905E6E0E0E /* Pods-BitFreeze WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze WatchKit Extension/Pods-BitFreeze WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		2847B76E6A3C2A4BC2431EEC /* Pods-BitFreeze WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze WatchKit App/Pods-BitFreeze WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		2AE6A7EB1CD9177400510A6D /* BitFreeze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitFreeze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE6A7EE1CD9177400510A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2AE6A7F01CD9177400510A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AE6A7F31CD9177400510A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AE6A7F51CD9177400510A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AE6A7F81CD9177400510A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2AE6A7FA1CD9177400510A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE6A7FD1CD9177400510A6D /* BitFreeze WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitFreeze WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE6A8031CD9177400510A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2AE6A8051CD9177400510A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AE6A8071CD9177400510A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE6A80C1CD9177400510A6D /* BitFreeze WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitFreeze WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE6A8121CD9177400510A6D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2AE6A8131CD9177400510A6D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		2AE6A8151CD9177400510A6D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2AE6A8171CD9177400510A6D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2AE6A8191CD9177400510A6D /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		2AE6A81B1CD9177400510A6D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2AE6A81D1CD9177400510A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AE6A81F1CD9177400510A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC657D22D130FFB68894A43 /* Pods-BitFreeze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze/Pods-BitFreeze.release.xcconfig"; sourceTree = "<group>"; };
+		602513042F5A600948FF5BD5 /* Pods-BitFreeze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze/Pods-BitFreeze.debug.xcconfig"; sourceTree = "<group>"; };
+		A6C67432A3C58F2D88AC2C46 /* Pods_BitFreeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE23FB9A0322BB26A8D0515 /* Pods-BitFreeze WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze WatchKit App/Pods-BitFreeze WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		C1AE721075FA14C1FC86CC48 /* Pods-BitFreeze WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze WatchKit Extension/Pods-BitFreeze WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		E2FE03524BCB52F588677EA2 /* Pods_BitFreeze_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2A5E85631CD9163000B9AE16 /* Frameworks */ = {
+		2AE6A7E81CD9177400510A6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC578887E6F393D7D4DED702 /* Pods_BitFreeze.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A5E85771CD9163000B9AE16 /* Frameworks */ = {
+		2AE6A8091CD9177400510A6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B5C5575AAFE075C37B7E7C /* Pods_BitFreeze_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A5E85821CD9163000B9AE16 /* Frameworks */ = {
+		A49D68BE4AFDB42DE7077724 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A5E859A1CD9163000B9AE16 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				44E9627E831E32F7FF695B5C /* Pods_BitFreeze_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A5E855D1CD9163000B9AE16 = {
+		2AE6A7E21CD9177400510A6D = {
 			isa = PBXGroup;
 			children = (
-				2A5E85681CD9163000B9AE16 /* BitFreeze */,
-				2A5E857D1CD9163000B9AE16 /* BitFreezeTests */,
-				2A5E85881CD9163000B9AE16 /* BitFreezeUITests */,
-				2A5E85921CD9163000B9AE16 /* BitFreeze WatchKit App */,
-				2A5E85A11CD9163000B9AE16 /* BitFreeze WatchKit Extension */,
-				2A5E85671CD9163000B9AE16 /* Products */,
+				2AE6A7ED1CD9177400510A6D /* BitFreeze */,
+				2AE6A8011CD9177400510A6D /* BitFreeze WatchKit App */,
+				2AE6A8101CD9177400510A6D /* BitFreeze WatchKit Extension */,
+				2AE6A7EC1CD9177400510A6D /* Products */,
+				75F5BA1645737F13546FA8E5 /* Pods */,
+				D1CBF53EC269800CA6B9236B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2A5E85671CD9163000B9AE16 /* Products */ = {
+		2AE6A7EC1CD9177400510A6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A5E85661CD9163000B9AE16 /* BitFreeze.app */,
-				2A5E857A1CD9163000B9AE16 /* BitFreezeTests.xctest */,
-				2A5E85851CD9163000B9AE16 /* BitFreezeUITests.xctest */,
-				2A5E858E1CD9163000B9AE16 /* BitFreeze WatchKit App.app */,
-				2A5E859D1CD9163000B9AE16 /* BitFreeze WatchKit Extension.appex */,
+				2AE6A7EB1CD9177400510A6D /* BitFreeze.app */,
+				2AE6A7FD1CD9177400510A6D /* BitFreeze WatchKit App.app */,
+				2AE6A80C1CD9177400510A6D /* BitFreeze WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A5E85681CD9163000B9AE16 /* BitFreeze */ = {
+		2AE6A7ED1CD9177400510A6D /* BitFreeze */ = {
 			isa = PBXGroup;
 			children = (
-				2A5E85691CD9163000B9AE16 /* AppDelegate.swift */,
-				2A5E856B1CD9163000B9AE16 /* ViewController.swift */,
-				2A5E856D1CD9163000B9AE16 /* Main.storyboard */,
-				2A5E85701CD9163000B9AE16 /* Assets.xcassets */,
-				2A5E85721CD9163000B9AE16 /* LaunchScreen.storyboard */,
-				2A5E85751CD9163000B9AE16 /* Info.plist */,
+				2AE6A7EE1CD9177400510A6D /* AppDelegate.swift */,
+				2AE6A7F01CD9177400510A6D /* ViewController.swift */,
+				2AE6A7F21CD9177400510A6D /* Main.storyboard */,
+				2AE6A7F51CD9177400510A6D /* Assets.xcassets */,
+				2AE6A7F71CD9177400510A6D /* LaunchScreen.storyboard */,
+				2AE6A7FA1CD9177400510A6D /* Info.plist */,
 			);
 			path = BitFreeze;
 			sourceTree = "<group>";
 		};
-		2A5E857D1CD9163000B9AE16 /* BitFreezeTests */ = {
+		2AE6A8011CD9177400510A6D /* BitFreeze WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				2A5E857E1CD9163000B9AE16 /* BitFreezeTests.swift */,
-				2A5E85801CD9163000B9AE16 /* Info.plist */,
-			);
-			path = BitFreezeTests;
-			sourceTree = "<group>";
-		};
-		2A5E85881CD9163000B9AE16 /* BitFreezeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2A5E85891CD9163000B9AE16 /* BitFreezeUITests.swift */,
-				2A5E858B1CD9163000B9AE16 /* Info.plist */,
-			);
-			path = BitFreezeUITests;
-			sourceTree = "<group>";
-		};
-		2A5E85921CD9163000B9AE16 /* BitFreeze WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				2A5E85931CD9163000B9AE16 /* Interface.storyboard */,
-				2A5E85961CD9163000B9AE16 /* Assets.xcassets */,
-				2A5E85981CD9163000B9AE16 /* Info.plist */,
+				2AE6A8021CD9177400510A6D /* Interface.storyboard */,
+				2AE6A8051CD9177400510A6D /* Assets.xcassets */,
+				2AE6A8071CD9177400510A6D /* Info.plist */,
 			);
 			path = "BitFreeze WatchKit App";
 			sourceTree = "<group>";
 		};
-		2A5E85A11CD9163000B9AE16 /* BitFreeze WatchKit Extension */ = {
+		2AE6A8101CD9177400510A6D /* BitFreeze WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2A5E85A41CD9163000B9AE16 /* InterfaceController.swift */,
-				2A5E85A61CD9163000B9AE16 /* ExtensionDelegate.swift */,
-				2A5E85A81CD9163000B9AE16 /* NotificationController.swift */,
-				2A5E85AA1CD9163000B9AE16 /* GlanceController.swift */,
-				2A5E85AC1CD9163000B9AE16 /* ComplicationController.swift */,
-				2A5E85AE1CD9163100B9AE16 /* Assets.xcassets */,
-				2A5E85B01CD9163100B9AE16 /* Info.plist */,
-				2A5E85A21CD9163000B9AE16 /* Supporting Files */,
+				2AE6A8131CD9177400510A6D /* InterfaceController.swift */,
+				2AE6A8151CD9177400510A6D /* ExtensionDelegate.swift */,
+				2AE6A8171CD9177400510A6D /* NotificationController.swift */,
+				2AE6A8191CD9177400510A6D /* GlanceController.swift */,
+				2AE6A81B1CD9177400510A6D /* ComplicationController.swift */,
+				2AE6A81D1CD9177400510A6D /* Assets.xcassets */,
+				2AE6A81F1CD9177400510A6D /* Info.plist */,
+				2AE6A8111CD9177400510A6D /* Supporting Files */,
 			);
 			path = "BitFreeze WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		2A5E85A21CD9163000B9AE16 /* Supporting Files */ = {
+		2AE6A8111CD9177400510A6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2A5E85A31CD9163000B9AE16 /* PushNotificationPayload.apns */,
+				2AE6A8121CD9177400510A6D /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75F5BA1645737F13546FA8E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				602513042F5A600948FF5BD5 /* Pods-BitFreeze.debug.xcconfig */,
+				3FC657D22D130FFB68894A43 /* Pods-BitFreeze.release.xcconfig */,
+				BDE23FB9A0322BB26A8D0515 /* Pods-BitFreeze WatchKit App.debug.xcconfig */,
+				2847B76E6A3C2A4BC2431EEC /* Pods-BitFreeze WatchKit App.release.xcconfig */,
+				C1AE721075FA14C1FC86CC48 /* Pods-BitFreeze WatchKit Extension.debug.xcconfig */,
+				241AA123747568905E6E0E0E /* Pods-BitFreeze WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D1CBF53EC269800CA6B9236B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6C67432A3C58F2D88AC2C46 /* Pods_BitFreeze.framework */,
+				170EE78B28161A41AD892FBB /* Pods_BitFreeze_WatchKit_App.framework */,
+				E2FE03524BCB52F588677EA2 /* Pods_BitFreeze_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A5E85651CD9163000B9AE16 /* BitFreeze */ = {
+		2AE6A7EA1CD9177400510A6D /* BitFreeze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A5E85BB1CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreeze" */;
+			buildConfigurationList = 2AE6A82A1CD9177400510A6D /* Build configuration list for PBXNativeTarget "BitFreeze" */;
 			buildPhases = (
-				2A5E85621CD9163000B9AE16 /* Sources */,
-				2A5E85631CD9163000B9AE16 /* Frameworks */,
-				2A5E85641CD9163000B9AE16 /* Resources */,
-				2A5E85BA1CD9163100B9AE16 /* Embed Watch Content */,
+				44F97EFCAB574DF0B2F18675 /* 📦 Check Pods Manifest.lock */,
+				2AE6A7E71CD9177400510A6D /* Sources */,
+				2AE6A7E81CD9177400510A6D /* Frameworks */,
+				2AE6A7E91CD9177400510A6D /* Resources */,
+				2AE6A8291CD9177400510A6D /* Embed Watch Content */,
+				49FC19741A605003F2914F9F /* 📦 Embed Pods Frameworks */,
+				A747CD3E2059D263B320105A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2A5E85911CD9163000B9AE16 /* PBXTargetDependency */,
+				2AE6A8001CD9177400510A6D /* PBXTargetDependency */,
 			);
 			name = BitFreeze;
 			productName = BitFreeze;
-			productReference = 2A5E85661CD9163000B9AE16 /* BitFreeze.app */;
+			productReference = 2AE6A7EB1CD9177400510A6D /* BitFreeze.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A5E85791CD9163000B9AE16 /* BitFreezeTests */ = {
+		2AE6A7FC1CD9177400510A6D /* BitFreeze WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A5E85BE1CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreezeTests" */;
+			buildConfigurationList = 2AE6A8261CD9177400510A6D /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit App" */;
 			buildPhases = (
-				2A5E85761CD9163000B9AE16 /* Sources */,
-				2A5E85771CD9163000B9AE16 /* Frameworks */,
-				2A5E85781CD9163000B9AE16 /* Resources */,
+				006E1C3CC250A395340FE967 /* 📦 Check Pods Manifest.lock */,
+				2AE6A7FB1CD9177400510A6D /* Resources */,
+				2AE6A8251CD9177400510A6D /* Embed App Extensions */,
+				A49D68BE4AFDB42DE7077724 /* Frameworks */,
+				C6B7E73C6B547ABE64AB382F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2A5E857C1CD9163000B9AE16 /* PBXTargetDependency */,
-			);
-			name = BitFreezeTests;
-			productName = BitFreezeTests;
-			productReference = 2A5E857A1CD9163000B9AE16 /* BitFreezeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2A5E85841CD9163000B9AE16 /* BitFreezeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A5E85C11CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreezeUITests" */;
-			buildPhases = (
-				2A5E85811CD9163000B9AE16 /* Sources */,
-				2A5E85821CD9163000B9AE16 /* Frameworks */,
-				2A5E85831CD9163000B9AE16 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A5E85871CD9163000B9AE16 /* PBXTargetDependency */,
-			);
-			name = BitFreezeUITests;
-			productName = BitFreezeUITests;
-			productReference = 2A5E85851CD9163000B9AE16 /* BitFreezeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		2A5E858D1CD9163000B9AE16 /* BitFreeze WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A5E85B71CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit App" */;
-			buildPhases = (
-				2A5E858C1CD9163000B9AE16 /* Resources */,
-				2A5E85B61CD9163100B9AE16 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A5E85A01CD9163000B9AE16 /* PBXTargetDependency */,
+				2AE6A80F1CD9177400510A6D /* PBXTargetDependency */,
 			);
 			name = "BitFreeze WatchKit App";
 			productName = "BitFreeze WatchKit App";
-			productReference = 2A5E858E1CD9163000B9AE16 /* BitFreeze WatchKit App.app */;
+			productReference = 2AE6A7FD1CD9177400510A6D /* BitFreeze WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		2A5E859C1CD9163000B9AE16 /* BitFreeze WatchKit Extension */ = {
+		2AE6A80B1CD9177400510A6D /* BitFreeze WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A5E85B31CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit Extension" */;
+			buildConfigurationList = 2AE6A8221CD9177400510A6D /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit Extension" */;
 			buildPhases = (
-				2A5E85991CD9163000B9AE16 /* Sources */,
-				2A5E859A1CD9163000B9AE16 /* Frameworks */,
-				2A5E859B1CD9163000B9AE16 /* Resources */,
+				6D3995B74E8EE95AFA014898 /* 📦 Check Pods Manifest.lock */,
+				2AE6A8081CD9177400510A6D /* Sources */,
+				2AE6A8091CD9177400510A6D /* Frameworks */,
+				2AE6A80A1CD9177400510A6D /* Resources */,
+				175832C7954A5C7AEC1A3B5E /* 📦 Embed Pods Frameworks */,
+				0DD8BC43A673995DAD68C1EC /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,44 +282,34 @@
 			);
 			name = "BitFreeze WatchKit Extension";
 			productName = "BitFreeze WatchKit Extension";
-			productReference = 2A5E859D1CD9163000B9AE16 /* BitFreeze WatchKit Extension.appex */;
+			productReference = 2AE6A80C1CD9177400510A6D /* BitFreeze WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2A5E855E1CD9163000B9AE16 /* Project object */ = {
+		2AE6A7E31CD9177400510A6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ipsum Corp.";
 				TargetAttributes = {
-					2A5E85651CD9163000B9AE16 = {
+					2AE6A7EA1CD9177400510A6D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = EP442BQ3E9;
 					};
-					2A5E85791CD9163000B9AE16 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = EP442BQ3E9;
-						TestTargetID = 2A5E85651CD9163000B9AE16;
-					};
-					2A5E85841CD9163000B9AE16 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = EP442BQ3E9;
-						TestTargetID = 2A5E85651CD9163000B9AE16;
-					};
-					2A5E858D1CD9163000B9AE16 = {
+					2AE6A7FC1CD9177400510A6D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = EP442BQ3E9;
 					};
-					2A5E859C1CD9163000B9AE16 = {
+					2AE6A80B1CD9177400510A6D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = EP442BQ3E9;
 					};
 				};
 			};
-			buildConfigurationList = 2A5E85611CD9163000B9AE16 /* Build configuration list for PBXProject "BitFreeze" */;
+			buildConfigurationList = 2AE6A7E61CD9177400510A6D /* Build configuration list for PBXProject "BitFreeze" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -365,148 +317,229 @@
 				en,
 				Base,
 			);
-			mainGroup = 2A5E855D1CD9163000B9AE16;
-			productRefGroup = 2A5E85671CD9163000B9AE16 /* Products */;
+			mainGroup = 2AE6A7E21CD9177400510A6D;
+			productRefGroup = 2AE6A7EC1CD9177400510A6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A5E85651CD9163000B9AE16 /* BitFreeze */,
-				2A5E85791CD9163000B9AE16 /* BitFreezeTests */,
-				2A5E85841CD9163000B9AE16 /* BitFreezeUITests */,
-				2A5E858D1CD9163000B9AE16 /* BitFreeze WatchKit App */,
-				2A5E859C1CD9163000B9AE16 /* BitFreeze WatchKit Extension */,
+				2AE6A7EA1CD9177400510A6D /* BitFreeze */,
+				2AE6A7FC1CD9177400510A6D /* BitFreeze WatchKit App */,
+				2AE6A80B1CD9177400510A6D /* BitFreeze WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2A5E85641CD9163000B9AE16 /* Resources */ = {
+		2AE6A7E91CD9177400510A6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A5E85741CD9163000B9AE16 /* LaunchScreen.storyboard in Resources */,
-				2A5E85711CD9163000B9AE16 /* Assets.xcassets in Resources */,
-				2A5E856F1CD9163000B9AE16 /* Main.storyboard in Resources */,
+				2AE6A7F91CD9177400510A6D /* LaunchScreen.storyboard in Resources */,
+				2AE6A7F61CD9177400510A6D /* Assets.xcassets in Resources */,
+				2AE6A7F41CD9177400510A6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A5E85781CD9163000B9AE16 /* Resources */ = {
+		2AE6A7FB1CD9177400510A6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE6A8061CD9177400510A6D /* Assets.xcassets in Resources */,
+				2AE6A8041CD9177400510A6D /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A5E85831CD9163000B9AE16 /* Resources */ = {
+		2AE6A80A1CD9177400510A6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A5E858C1CD9163000B9AE16 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A5E85971CD9163000B9AE16 /* Assets.xcassets in Resources */,
-				2A5E85951CD9163000B9AE16 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A5E859B1CD9163000B9AE16 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A5E85AF1CD9163100B9AE16 /* Assets.xcassets in Resources */,
+				2AE6A81E1CD9177400510A6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		006E1C3CC250A395340FE967 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0DD8BC43A673995DAD68C1EC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitFreeze WatchKit Extension/Pods-BitFreeze WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		175832C7954A5C7AEC1A3B5E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitFreeze WatchKit Extension/Pods-BitFreeze WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44F97EFCAB574DF0B2F18675 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49FC19741A605003F2914F9F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitFreeze/Pods-BitFreeze-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D3995B74E8EE95AFA014898 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A747CD3E2059D263B320105A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitFreeze/Pods-BitFreeze-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6B7E73C6B547ABE64AB382F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitFreeze WatchKit App/Pods-BitFreeze WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2A5E85621CD9163000B9AE16 /* Sources */ = {
+		2AE6A7E71CD9177400510A6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A5E856C1CD9163000B9AE16 /* ViewController.swift in Sources */,
-				2A5E856A1CD9163000B9AE16 /* AppDelegate.swift in Sources */,
+				2AE6A7F11CD9177400510A6D /* ViewController.swift in Sources */,
+				2AE6A7EF1CD9177400510A6D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A5E85761CD9163000B9AE16 /* Sources */ = {
+		2AE6A8081CD9177400510A6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A5E857F1CD9163000B9AE16 /* BitFreezeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A5E85811CD9163000B9AE16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A5E858A1CD9163000B9AE16 /* BitFreezeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A5E85991CD9163000B9AE16 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A5E85A91CD9163000B9AE16 /* NotificationController.swift in Sources */,
-				2A5E85A71CD9163000B9AE16 /* ExtensionDelegate.swift in Sources */,
-				2A5E85AD1CD9163000B9AE16 /* ComplicationController.swift in Sources */,
-				2A5E85A51CD9163000B9AE16 /* InterfaceController.swift in Sources */,
-				2A5E85AB1CD9163000B9AE16 /* GlanceController.swift in Sources */,
+				2AE6A8181CD9177400510A6D /* NotificationController.swift in Sources */,
+				2AE6A8161CD9177400510A6D /* ExtensionDelegate.swift in Sources */,
+				2AE6A81C1CD9177400510A6D /* ComplicationController.swift in Sources */,
+				2AE6A8141CD9177400510A6D /* InterfaceController.swift in Sources */,
+				2AE6A81A1CD9177400510A6D /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2A5E857C1CD9163000B9AE16 /* PBXTargetDependency */ = {
+		2AE6A8001CD9177400510A6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A5E85651CD9163000B9AE16 /* BitFreeze */;
-			targetProxy = 2A5E857B1CD9163000B9AE16 /* PBXContainerItemProxy */;
+			target = 2AE6A7FC1CD9177400510A6D /* BitFreeze WatchKit App */;
+			targetProxy = 2AE6A7FF1CD9177400510A6D /* PBXContainerItemProxy */;
 		};
-		2A5E85871CD9163000B9AE16 /* PBXTargetDependency */ = {
+		2AE6A80F1CD9177400510A6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A5E85651CD9163000B9AE16 /* BitFreeze */;
-			targetProxy = 2A5E85861CD9163000B9AE16 /* PBXContainerItemProxy */;
-		};
-		2A5E85911CD9163000B9AE16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A5E858D1CD9163000B9AE16 /* BitFreeze WatchKit App */;
-			targetProxy = 2A5E85901CD9163000B9AE16 /* PBXContainerItemProxy */;
-		};
-		2A5E85A01CD9163000B9AE16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A5E859C1CD9163000B9AE16 /* BitFreeze WatchKit Extension */;
-			targetProxy = 2A5E859F1CD9163000B9AE16 /* PBXContainerItemProxy */;
+			target = 2AE6A80B1CD9177400510A6D /* BitFreeze WatchKit Extension */;
+			targetProxy = 2AE6A80E1CD9177400510A6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A5E856D1CD9163000B9AE16 /* Main.storyboard */ = {
+		2AE6A7F21CD9177400510A6D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A5E856E1CD9163000B9AE16 /* Base */,
+				2AE6A7F31CD9177400510A6D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2A5E85721CD9163000B9AE16 /* LaunchScreen.storyboard */ = {
+		2AE6A7F71CD9177400510A6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A5E85731CD9163000B9AE16 /* Base */,
+				2AE6A7F81CD9177400510A6D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		2A5E85931CD9163000B9AE16 /* Interface.storyboard */ = {
+		2AE6A8021CD9177400510A6D /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A5E85941CD9163000B9AE16 /* Base */,
+				2AE6A8031CD9177400510A6D /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -514,7 +547,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2A5E85B11CD9163100B9AE16 /* Debug */ = {
+		2AE6A8201CD9177400510A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -560,7 +593,7 @@
 			};
 			name = Debug;
 		};
-		2A5E85B21CD9163100B9AE16 /* Release */ = {
+		2AE6A8211CD9177400510A6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -599,8 +632,9 @@
 			};
 			name = Release;
 		};
-		2A5E85B41CD9163100B9AE16 /* Debug */ = {
+		2AE6A8231CD9177400510A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1AE721075FA14C1FC86CC48 /* Pods-BitFreeze WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "BitFreeze WatchKit Extension/Info.plist";
@@ -614,8 +648,9 @@
 			};
 			name = Debug;
 		};
-		2A5E85B51CD9163100B9AE16 /* Release */ = {
+		2AE6A8241CD9177400510A6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 241AA123747568905E6E0E0E /* Pods-BitFreeze WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "BitFreeze WatchKit Extension/Info.plist";
@@ -629,8 +664,9 @@
 			};
 			name = Release;
 		};
-		2A5E85B81CD9163100B9AE16 /* Debug */ = {
+		2AE6A8271CD9177400510A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE23FB9A0322BB26A8D0515 /* Pods-BitFreeze WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -645,8 +681,9 @@
 			};
 			name = Debug;
 		};
-		2A5E85B91CD9163100B9AE16 /* Release */ = {
+		2AE6A8281CD9177400510A6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2847B76E6A3C2A4BC2431EEC /* Pods-BitFreeze WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -661,8 +698,9 @@
 			};
 			name = Release;
 		};
-		2A5E85BC1CD9163100B9AE16 /* Debug */ = {
+		2AE6A82B1CD9177400510A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 602513042F5A600948FF5BD5 /* Pods-BitFreeze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BitFreeze/Info.plist;
@@ -672,116 +710,58 @@
 			};
 			name = Debug;
 		};
-		2A5E85BD1CD9163100B9AE16 /* Release */ = {
+		2AE6A82C1CD9177400510A6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC657D22D130FFB68894A43 /* Pods-BitFreeze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BitFreeze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IpsumCorp.BitFreeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		2A5E85BF1CD9163100B9AE16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BitFreezeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IpsumCorp.BitFreezeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitFreeze.app/BitFreeze";
-			};
-			name = Debug;
-		};
-		2A5E85C01CD9163100B9AE16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = BitFreezeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IpsumCorp.BitFreezeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitFreeze.app/BitFreeze";
-			};
-			name = Release;
-		};
-		2A5E85C21CD9163100B9AE16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = BitFreezeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IpsumCorp.BitFreezeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BitFreeze;
-			};
-			name = Debug;
-		};
-		2A5E85C31CD9163100B9AE16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = BitFreezeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IpsumCorp.BitFreezeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BitFreeze;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A5E85611CD9163000B9AE16 /* Build configuration list for PBXProject "BitFreeze" */ = {
+		2AE6A7E61CD9177400510A6D /* Build configuration list for PBXProject "BitFreeze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A5E85B11CD9163100B9AE16 /* Debug */,
-				2A5E85B21CD9163100B9AE16 /* Release */,
+				2AE6A8201CD9177400510A6D /* Debug */,
+				2AE6A8211CD9177400510A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A5E85B31CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit Extension" */ = {
+		2AE6A8221CD9177400510A6D /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A5E85B41CD9163100B9AE16 /* Debug */,
-				2A5E85B51CD9163100B9AE16 /* Release */,
+				2AE6A8231CD9177400510A6D /* Debug */,
+				2AE6A8241CD9177400510A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		2A5E85B71CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit App" */ = {
+		2AE6A8261CD9177400510A6D /* Build configuration list for PBXNativeTarget "BitFreeze WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A5E85B81CD9163100B9AE16 /* Debug */,
-				2A5E85B91CD9163100B9AE16 /* Release */,
+				2AE6A8271CD9177400510A6D /* Debug */,
+				2AE6A8281CD9177400510A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		2A5E85BB1CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreeze" */ = {
+		2AE6A82A1CD9177400510A6D /* Build configuration list for PBXNativeTarget "BitFreeze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A5E85BC1CD9163100B9AE16 /* Debug */,
-				2A5E85BD1CD9163100B9AE16 /* Release */,
+				2AE6A82B1CD9177400510A6D /* Debug */,
+				2AE6A82C1CD9177400510A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		2A5E85BE1CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreezeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A5E85BF1CD9163100B9AE16 /* Debug */,
-				2A5E85C01CD9163100B9AE16 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		2A5E85C11CD9163100B9AE16 /* Build configuration list for PBXNativeTarget "BitFreezeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A5E85C21CD9163100B9AE16 /* Debug */,
-				2A5E85C31CD9163100B9AE16 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2A5E855E1CD9163000B9AE16 /* Project object */;
+	rootObject = 2AE6A7E31CD9177400510A6D /* Project object */;
 }
