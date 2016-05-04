@@ -14,10 +14,11 @@ import SwiftyJSON
 
 class DataStore {
     
-    
-    let userDefaults = NSUserDefaults(suiteName: "group.ipsum.BitFreeze")!
+    let userDefaults = NSUserDefaults(suiteName: "group.ipsumcorp.bit.freeze")!
+
     
     func save(key : String,object : NSObject){
+
         
         userDefaults.setValue(object, forKey: key)
     
@@ -27,6 +28,7 @@ class DataStore {
     }
     
     func load(key : String) -> NSObject?  {
+
         let object : AnyObject? = userDefaults.valueForKey(key)
         
         return object as? NSObject
