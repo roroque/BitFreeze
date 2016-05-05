@@ -41,8 +41,8 @@ class ViewController: UIViewController,WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
         
+    
      
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -60,7 +60,7 @@ class ViewController: UIViewController,WCSessionDelegate {
     func sendData(reply : (([String : AnyObject]) -> Void)){
         
         let manager = BitCoinAverageService()
-        manager.retrieveMarketsData("BRL") { jsonObject in
+        manager.retrieveMarketsData { jsonObject in
             var market = self.dataManager.load("market") as? String
             
             if (market == nil){
@@ -88,6 +88,8 @@ class ViewController: UIViewController,WCSessionDelegate {
                 // Handle errors here
             }
             */
+            
+        
             
         }
         

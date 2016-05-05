@@ -18,7 +18,7 @@ class BitCoinAverageService {
     
     //BRL
     
-    func retrieveMarketsData(currency : String, jsonHandler : (JSON) -> () ){
+    func retrieveMarketsData(jsonHandler : (JSON) -> () ){
         
         Alamofire.request(.GET,(rootApiUrl)).responseJSON { response in
             
