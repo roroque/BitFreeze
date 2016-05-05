@@ -14,9 +14,10 @@ import Alamofire
 
 
 
+
 class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
-    
+     let session = WCSession.defaultSession()
 
 
     @IBOutlet var ask: WKInterfaceLabel!
@@ -28,7 +29,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.awakeWithContext(context)
         //Swift
         if (WCSession.isSupported()) {
-            let session = WCSession.defaultSession()
+           
             session.delegate = self
             session.activateSession()
             
@@ -41,6 +42,17 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        session.sendMessage(["oi" : "oi"], replyHandler: { dict in
+            
+            
+                self.updateInterface(dict)
+            
+            }) { error in
+                print("error")
+        }
+        
+        
+        
     }
 
     override func didDeactivate() {
@@ -51,13 +63,17 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     func session(session: WCSession,didReceiveApplicationContext applicationContext: [String : AnyObject]){
 
        
-        updateInterface(applicationContext)
+        //updateInterface(applicationContext)
+        
+        
         
         
     }
     
     
     func updateInterface( dataDict :[String : AnyObject]){
+        
+        print("me chamaram")
         
         let askPartial = dataDict["ask"] as! String
         let bidPartial = dataDict["bid"] as! String

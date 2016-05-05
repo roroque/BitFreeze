@@ -52,6 +52,13 @@ class ViewController: UIViewController,WCSessionDelegate {
     
     @IBAction func buttonPressed(sender: AnyObject) {
         
+       // sendData()
+        
+    }
+    
+    
+    func sendData(reply : (([String : AnyObject]) -> Void)){
+        
         let manager = BitCoinAverageService()
         manager.retrieveMarketsData("BRL") { jsonObject in
             var market = self.dataManager.load("market") as? String
@@ -73,13 +80,14 @@ class ViewController: UIViewController,WCSessionDelegate {
             let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
             let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
             let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
-            
+            reply(applicationDict)
+            /*
             do {
                 try WCSession.defaultSession().updateApplicationContext(applicationDict)
             } catch {
                 // Handle errors here
             }
-            
+            */
             
         }
         
@@ -90,6 +98,17 @@ class ViewController: UIViewController,WCSessionDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func session(session: WCSession,didReceiveMessage message: [String : AnyObject],replyHandler: ([String : AnyObject]) -> Void){
+        
+        sendData(replyHandler)
+        
+        
+    }
+    
+    
+    
 
 
 
