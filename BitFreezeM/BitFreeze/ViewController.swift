@@ -41,12 +41,7 @@ class ViewController: UIViewController,WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let manager = BitCoinAverageService()
-        manager.retrieveMarketsData("BRL") { jsonObject in
-            
-            self.dataManager.save("marketJson", object: jsonObject.rawString() as! NSObject)
-
-        }
+       
         
      
         
@@ -57,17 +52,36 @@ class ViewController: UIViewController,WCSessionDelegate {
     
     @IBAction func buttonPressed(sender: AnyObject) {
         
-        let y =  dataManager.load("marketJson")
-
-        
-        do {
-            let applicationDict = [ "test" : y as! String] // Create a dict of application data
-            try WCSession.defaultSession().updateApplicationContext(applicationDict)
-        } catch {
-            // Handle errors here
+        let manager = BitCoinAverageService()
+        manager.retrieveMarketsData("BRL") { jsonObject in
+            var market = self.dataManager.load("market") as? String
+            
+            if (market == nil){
+                
+                market = "mercado"
+            }
+            
+            var currency = self.dataManager.load("currency") as? String
+            
+            if (currency == nil){
+                
+                currency = "BRL"
+            }
+            
+            
+            let askPartial = jsonObject[currency!][market!]["rates"]["ask"].stringValue
+            let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
+            let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
+            
+            do {
+                try WCSession.defaultSession().updateApplicationContext(applicationDict)
+            } catch {
+                // Handle errors here
+            }
+            
+            
         }
-        
-        
         
     }
   

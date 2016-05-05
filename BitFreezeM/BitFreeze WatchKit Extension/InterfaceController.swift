@@ -49,29 +49,21 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     }
     
     func session(session: WCSession,didReceiveApplicationContext applicationContext: [String : AnyObject]){
-    
-        let x = applicationContext["test"] as? String
-        
-        let jason = JSON.parse(x!)
-        
-        
-        
-        
-        
+
        
-        updateInterface(jason)
+        updateInterface(applicationContext)
         
         
     }
     
     
-    func updateInterface(exchangeData : JSON){
+    func updateInterface( dataDict :[String : AnyObject]){
         
-        //variavel a ser carregada das preferencias sobre qual mercado esta sendo olhado ex:foxbit
-        let nomeMercado = "mercado"
-        let askPartial = exchangeData[nomeMercado]["rates"]["ask"].stringValue
-        let bidPartial = exchangeData[nomeMercado]["rates"]["bid"].stringValue
-        let pricePartial = exchangeData[nomeMercado]["rates"]["last"].stringValue
+        let askPartial = dataDict["ask"] as! String
+        let bidPartial = dataDict["bid"] as! String
+        let pricePartial = dataDict["price"] as! String
+        let marketPartial = dataDict["market"] as! String
+        let currencyPartial = dataDict["currency"] as! String
         
         
         ask.setText(askPartial)

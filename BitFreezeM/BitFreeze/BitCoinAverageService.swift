@@ -13,14 +13,14 @@ import SwiftyJSON
 
 class BitCoinAverageService {
     
-     private let rootApiUrl = "https://api.bitcoinaverage.com/exchanges/"
+     private let rootApiUrl = "https://api.bitcoinaverage.com/exchanges/all"
     
     
     //BRL
     
     func retrieveMarketsData(currency : String, jsonHandler : (JSON) -> () ){
         
-        Alamofire.request(.GET,(rootApiUrl + currency)).responseJSON { response in
+        Alamofire.request(.GET,(rootApiUrl)).responseJSON { response in
             
             if let data = response.data{
                 
