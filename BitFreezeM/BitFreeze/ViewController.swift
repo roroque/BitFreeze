@@ -57,6 +57,53 @@ class ViewController: UIViewController,WCSessionDelegate {
     }
     
     
+    func backGroundSend(){
+        
+        print("hey ho")
+        
+        
+        let manager = BitCoinAverageService()
+        manager.retrieveMarketsData { jsonObject in
+            var market = self.dataManager.load("market") as? String
+            
+            if (market == nil){
+                
+                market = "mercado"
+            }
+            
+            var currency = self.dataManager.load("currency") as? String
+            
+            if (currency == nil){
+                
+                currency = "BRL"
+            }
+            
+            
+            let askPartial = jsonObject[currency!][market!]["rates"]["ask"].stringValue
+            let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
+            let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
+           
+            self.session.sendMessage(applicationDict, replyHandler: { dict in
+                
+                print(dict)
+                
+            }) { error in
+                print("error")
+            }
+            
+            
+            
+            
+        }
+
+        
+        
+        
+    }
+    
+    
+    
     func sendData(reply : (([String : AnyObject]) -> Void)){
         
         let manager = BitCoinAverageService()
@@ -81,13 +128,7 @@ class ViewController: UIViewController,WCSessionDelegate {
             let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
             let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
             reply(applicationDict)
-            /*
-            do {
-                try WCSession.defaultSession().updateApplicationContext(applicationDict)
-            } catch {
-                // Handle errors here
-            }
-            */
+        
             
         
             

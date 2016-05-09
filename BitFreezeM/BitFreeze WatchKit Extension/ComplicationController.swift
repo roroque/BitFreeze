@@ -50,14 +50,42 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getNextRequestedUpdateDateWithHandler(handler: (NSDate?) -> Void) {
         // Call the handler with the date when you would next like to be given the opportunity to update your complication content
-        handler(nil);
+        handler(NSDate(timeIntervalSinceNow: 5*60));
     }
     
     // MARK: - Placeholder Templates
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
-    }
+        var template: CLKComplicationTemplate? = nil
+        switch complication.family {
+        case .ModularSmall:
+            let modularSmallTemplate = CLKComplicationTemplateModularSmallSimpleText()
+            modularSmallTemplate.textProvider = CLKSimpleTextProvider(text: "OB")
+            template = modularSmallTemplate
+        case .ModularLarge:
+            let modularLarge = CLKComplicationTemplateModularLargeTable()
+            modularLarge.headerTextProvider = CLKSimpleTextProvider(text: "olaa lucas")
+            modularLarge.row1Column1TextProvider = CLKSimpleTextProvider(text: "olaa lucas")
+            modularLarge.row1Column2TextProvider = CLKSimpleTextProvider(text: "")
+
+            modularLarge.row2Column1TextProvider = CLKSimpleTextProvider(text: "")
+            modularLarge.row2Column2TextProvider = CLKSimpleTextProvider(text: "")
+
+            template = modularLarge
+        case .UtilitarianSmall:
+           template = nil
+        case .UtilitarianLarge:
+            template = nil
+        case .CircularSmall:
+            let modularTemplate = CLKComplicationTemplateCircularSmallRingText()
+            modularTemplate.textProvider = CLKSimpleTextProvider(text: "--")
+            modularTemplate.fillFraction = 0.7
+            modularTemplate.ringStyle = CLKComplicationRingStyle.Closed
+            template = modularTemplate
+        }
+        handler(template)
+        
+        }
     
 }

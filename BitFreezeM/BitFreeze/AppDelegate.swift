@@ -47,8 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication,
                      performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void){
+        //mandar mensagem para watch
         
         
+        let controller = window?.rootViewController as! ViewController
+        controller.backGroundSend()
         
         completionHandler(UIBackgroundFetchResult.NewData)
         

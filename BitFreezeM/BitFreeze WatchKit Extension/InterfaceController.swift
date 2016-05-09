@@ -17,7 +17,9 @@ import Alamofire
 
 class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
-     let session = WCSession.defaultSession()
+    let session = WCSession.defaultSession()
+    let dataManager = DataStore()
+
 
 
     @IBOutlet var ask: WKInterfaceLabel!
@@ -41,6 +43,11 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        loadInterface()
+        
+        
+        
         
         session.sendMessage(["oi" : "oi"], replyHandler: { dict in
             
@@ -71,6 +78,23 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     }
     
     
+    func loadInterface(){
+        print ("voltando")
+        
+        let askPartial = dataManager.load("ask") as! String
+        let bidPartial = dataManager.load("bid") as! String
+        let pricePartial = dataManager.load("price") as! String
+        let marketPartial = dataManager.load("market") as! String
+        let currencyPartial = dataManager.load("currency") as! String
+        
+        
+        ask.setText(askPartial)
+        bid.setText(bidPartial)
+        price.setText(pricePartial)
+        
+    }
+    
+    
     func updateInterface( dataDict :[String : AnyObject]){
         
         print("me chamaram")
@@ -82,13 +106,33 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         let currencyPartial = dataDict["currency"] as! String
         
         
-        ask.setText(askPartial)
-        bid.setText(bidPartial)
-        price.setText(pricePartial)
+        dataManager.save("ask", object: askPartial)
+        dataManager.save("bid", object: bidPartial)
+        dataManager.save("price", object: pricePartial)
+        dataManager.save("market", object: marketPartial)
+        dataManager.save("currency", object: currencyPartial)
 
         
         
+        ask.setText(askPartial)
+        bid.setText(bidPartial)
+        price.setText(pricePartial)
+        
     }
+    
+    
+    
+    func session(session: WCSession,didReceiveMessage message: [String : AnyObject],replyHandler: ([String : AnyObject]) -> Void){
+        
+        updateInterface(message)
+        replyHandler(["hey" : "lets go"])
+        
+        
+    }
+    
+    
+    
+    
     
     
     
