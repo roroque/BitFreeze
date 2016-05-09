@@ -16,6 +16,34 @@ class BitCoinAverageService {
      private let rootApiUrl = "https://api.bitcoinaverage.com/exchanges/all"
     
     
+    private let CURRENCY_URL = "https://api.bitcoinaverage.com/exchanges/"
+    private let ALL_EXCHANGES = "https://api.bitcoinaverage.com/exchanges/all"
+    
+    func getCurrency(currency: String, completionHandler: (JSON) -> ()){
+        urlRequest(CURRENCY_URL + currency, completionHandler)
+    }
+    
+    func getAllExchanges(completionHandler: (JSON) -> ()){
+        urlRequest(ALL_EXCHANGES, completionHandler)
+    }
+    
+    private func urlRequest(url: String, _ completionHandler: (JSON)->()){
+        Alamofire.request(.GET, url).responseJSON{
+            response in
+            
+            switch response.result{
+            case .Success(let value):
+                completionHandler(JSON(value))
+                
+            case .Failure(let error):
+                print ("Erro ao fazer requisicao para o servidor:\n\n" + error.description)
+            }
+        }
+        
+    }
+
+    
+    
     //BRL
     
     func retrieveMarketsData(jsonHandler : (JSON) -> () ){
