@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X3X-2s-emJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SfM-Oj-joo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="244.5" y="186"/>
         </scene>
-        <!--Currency Table View Controller-->
+        <!--Currencies-->
         <scene sceneID="319-YR-gk4">
             <objects>
                 <tableViewController id="X3X-2s-emJ" customClass="CurrencyTableViewController" customModule="BitFreeze" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,12 +83,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyTableViewCell" id="RzK-Ti-6Jp">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RzK-Ti-6Jp" id="UZy-WM-C7R">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="aPP-dy-5wE" kind="show" identifier="MarketTableViewControllerSegue" id="OsK-oE-Vl3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -96,10 +99,57 @@
                             <outlet property="delegate" destination="X3X-2s-emJ" id="aEU-vm-RWf"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Currencies" id="FhU-fR-8WA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXy-7j-dzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="294" y="861"/>
+            <point key="canvasLocation" x="950" y="1237"/>
+        </scene>
+        <!--Market Table View Controller-->
+        <scene sceneID="fY9-JC-hcf">
+            <objects>
+                <tableViewController id="aPP-dy-5wE" customClass="MarketTableViewController" customModule="BitFreeze" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GBS-MX-y2f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarketTableViewCell" id="DTA-I7-ybE">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DTA-I7-ybE" id="CTE-pn-JQU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aPP-dy-5wE" id="dL5-uP-YMc"/>
+                            <outlet property="delegate" destination="aPP-dy-5wE" id="LAq-xx-21Q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCg-Fe-KAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623" y="1237"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gc1-eO-AgA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SfM-Oj-joo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rru-Ay-2a9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X3X-2s-emJ" kind="relationship" relationship="rootViewController" id="tQj-qE-vrZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wss-QQ-Mab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="1237"/>
         </scene>
     </scenes>
 </document>
