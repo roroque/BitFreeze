@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
@@ -10,9 +10,44 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitFreeze_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="geS-mC-trD"/>
-                        <label alignment="left" text="Label" id="vw6-dg-p87"/>
-                        <label alignment="left" text="Label" id="c8O-JB-nBW"/>
+                        <group width="1" alignment="left" spacing="20" id="P68-dG-mYy">
+                            <items>
+                                <imageView width="41" height="43" alignment="left" image="BitcoinSymbol" contentMode="scaleAspectFit" id="hVe-WE-3Lh"/>
+                                <label alignment="right" text="BRL" textAlignment="right" id="1Ya-PN-2g1"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="center" id="hdO-A5-Xde">
+                            <items>
+                                <label alignment="center" text="..." textAlignment="left" id="c8O-JB-nBW">
+                                    <fontDescription key="font" type="system" pointSize="33"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="6yq-tA-az8">
+                            <items>
+                                <label width="100" alignment="center" text="ASK" textAlignment="center" id="XKx-a7-IBj">
+                                    <variation key="device=watch38mm" width="50"/>
+                                    <variation key="device=watch42mm" width="50"/>
+                                </label>
+                                <label width="100" alignment="center" text="BID" textAlignment="center" id="DXF-eR-5cK">
+                                    <variation key="device=watch38mm" width="50"/>
+                                    <variation key="device=watch42mm" width="50"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="x4M-Mn-lJG">
+                            <items>
+                                <label width="100" alignment="center" text="..." textAlignment="center" id="geS-mC-trD">
+                                    <variation key="device=watch38mm" width="50"/>
+                                    <variation key="device=watch42mm" width="50"/>
+                                </label>
+                                <label width="100" alignment="center" text="..." textAlignment="center" id="vw6-dg-p87">
+                                    <variation key="device=watch38mm" width="50"/>
+                                    <variation key="device=watch42mm" width="50"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="ask" destination="geS-mC-trD" id="0ND-u0-zdx"/>
@@ -21,14 +56,18 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="235" y="285"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="BitFreeze_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="Mercado Bitcoin" id="aDc-Q6-byv"/>
+                            </items>
+                        </group>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
