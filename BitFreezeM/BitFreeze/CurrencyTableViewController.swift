@@ -10,6 +10,7 @@ import UIKit
 
 class CurrencyTableViewController: UITableViewController {
     
+    let segueIdentifier = "MarketTableViewControllerSegue"
     let cellIdentifier = "CurrencyTableViewCell"
     private var currencies: [CurrencyData] = []
     
@@ -37,8 +38,29 @@ class CurrencyTableViewController: UITableViewController {
         
         cell.textLabel?.text = currencies[indexPath.row].currency
         
+        
+        // Não destaca celula quando selecionada
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         return cell
         
+    }
+    
+    //MARK: Navigation
+    
+    
+    // Quando clicar em uma moeda na table, mandará para a proxima view um objeto do tipo CurrencyData
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == segueIdentifier
+        {
+            if let destinationVC = segue.destinationViewController as? MarketTableViewController, tableIndex = tableView.indexPathForSelectedRow?.row{
+                
+                destinationVC.currencyObject = self.currencies[tableIndex]
+                
+            }
+        }else{
+            print("Falha ao reconhecer segue: \(segueIdentifier)")
+        }
     }
     
 }

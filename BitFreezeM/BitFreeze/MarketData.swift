@@ -10,6 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class MarketData: NSObject{
+    var marketName: String
     var display_URL: String
     var display_Name: String
     var ask: String
@@ -18,7 +19,7 @@ class MarketData: NSObject{
     var volume_btc: String
     var volume_percent: String
     
-    init?(_ jsonMarket: JSON){
+    init?(_ mktName: String, _ jsonMarket: JSON){
         
         guard let display_URL = jsonMarket["display_URL"].string else {
             print(jsonMarket["display_URL"].error)
@@ -62,6 +63,7 @@ class MarketData: NSObject{
             
         }
         
+        self.marketName = mktName
         self.display_URL = display_URL
         self.display_Name = display_Name
         self.ask = ask.stringValue
