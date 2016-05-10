@@ -79,18 +79,18 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
     
     func loadInterface(){
-        print ("voltando")
-        
-        let askPartial = dataManager.load("ask") as! String
-        let bidPartial = dataManager.load("bid") as! String
-        let pricePartial = dataManager.load("price") as! String
-        let marketPartial = dataManager.load("market") as! String
-        let currencyPartial = dataManager.load("currency") as! String
-        
-        
-        ask.setText(askPartial)
-        bid.setText(bidPartial)
-        price.setText(pricePartial)
+//        print ("voltando")
+//        
+//        let askPartial = dataManager.load("ask") as! String
+//        let bidPartial = dataManager.load("bid") as! String
+//        let pricePartial = dataManager.load("price") as! String
+//        let marketPartial = dataManager.load("market") as! String
+//        let currencyPartial = dataManager.load("currency") as! String
+//        
+//        
+//        ask.setText(askPartial)
+//        bid.setText(bidPartial)
+//        price.setText(pricePartial)
         
     }
     
@@ -112,7 +112,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         dataManager.save("market", object: marketPartial)
         dataManager.save("currency", object: currencyPartial)
 
-        
+        print (askPartial)
         
         ask.setText(askPartial)
         bid.setText(bidPartial)
