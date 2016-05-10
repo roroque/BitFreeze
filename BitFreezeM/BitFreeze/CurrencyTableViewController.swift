@@ -38,6 +38,10 @@ class CurrencyTableViewController: UITableViewController {
         
         cell.textLabel?.text = currencies[indexPath.row].currency
         
+        
+        // Não destaca celula quando selecionada
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         return cell
         
     }

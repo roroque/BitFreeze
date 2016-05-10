@@ -22,7 +22,7 @@ class CurrencyData: NSObject{
                 continue
             }
             
-            guard let newExchange = MarketData(subJSON) else{
+            guard let newExchange = MarketData(exchange,subJSON) else{
                 print("Falha ao parsear exchange: \(exchange)")
                 return nil
             }
