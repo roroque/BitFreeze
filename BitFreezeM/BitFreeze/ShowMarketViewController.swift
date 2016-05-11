@@ -18,13 +18,24 @@ class ShowMarketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ShowMarketViewController.testFunc(_:)), name: changeMarketKey, object: nil)
         
-        if let loadedData = PersistencyManager().loadCurrentMarket(){
-            data = loadedData
+        if Reachability.isConnectedToNetwork() == true {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ShowMarketViewController.testFunc(_:)), name: changeMarketKey, object: nil)
+            
+            if let loadedData = PersistencyManager().loadCurrentMarket(){
+                data = loadedData
+            }
+            
+            requestData()
+        }else{
+            let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(okAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+
         }
-        
-        requestData()
         
     }
     

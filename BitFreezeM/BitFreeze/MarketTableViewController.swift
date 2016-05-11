@@ -99,6 +99,7 @@ class MarketTableViewController: UITableViewController {
                     }
                     
                     self.loadedData.market = obj.exchanges[indexPath.row].marketName
+                    self.loadedData.currency = obj.currency
                     
                     PersistencyManager().saveCurrentMarket(self.loadedData.currency, self.loadedData.market)
                 

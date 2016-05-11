@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		20006FD5FFE70D9EA6C30AB2 /* Pods_BitFreeze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7E9AB38734E115B8030A2B /* Pods_BitFreeze.framework */; };
 		BA9C5D6E476E0FD6B0BCD373 /* Pods_BitFreeze_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B59DC1D60B22D52032280D /* Pods_BitFreeze_WatchKit_Extension.framework */; };
+		E04D8E3C1CE3BF24000872F7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D8E3B1CE3BF24000872F7 /* Reachability.swift */; };
 		E072F5231CE0E82400AEBE73 /* MarketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5221CE0E82400AEBE73 /* MarketManager.swift */; };
 		E072F5251CE0E84400AEBE73 /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5241CE0E84400AEBE73 /* MarketData.swift */; };
 		E072F5271CE0E86A00AEBE73 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */; };
@@ -87,6 +88,7 @@
 		821E0F24965631AEA7AF0036 /* Pods-BitFreeze WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze WatchKit Extension/Pods-BitFreeze WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		93B59DC1D60B22D52032280D /* Pods_BitFreeze_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7E9AB38734E115B8030A2B /* Pods_BitFreeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04D8E3B1CE3BF24000872F7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E072F5221CE0E82400AEBE73 /* MarketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketManager.swift; sourceTree = "<group>"; };
 		E072F5241CE0E84400AEBE73 /* MarketData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
 		E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				E072F5241CE0E84400AEBE73 /* MarketData.swift */,
 				E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */,
 				E091711D1CE118E10070E150 /* PersistencyManager.swift */,
+				E04D8E3B1CE3BF24000872F7 /* Reachability.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			files = (
 				FA9DD2B61CD927230092BB40 /* ViewController.swift in Sources */,
 				FA5B99C61CD931EF0036C8DD /* DataStore.swift in Sources */,
+				E04D8E3C1CE3BF24000872F7 /* Reachability.swift in Sources */,
 				E072F52A1CE0E8CB00AEBE73 /* CurrencyTableViewController.swift in Sources */,
 				FA9DD2F31CD927FB0092BB40 /* BitCoinAverageService.swift in Sources */,
 				E072F5231CE0E82400AEBE73 /* MarketManager.swift in Sources */,
