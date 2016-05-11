@@ -15,6 +15,7 @@
 		E072F52A1CE0E8CB00AEBE73 /* CurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */; };
 		E072F52D1CE0FA8F00AEBE73 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */; };
 		E091711E1CE118E10070E150 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091711D1CE118E10070E150 /* PersistencyManager.swift */; };
+		E0BF497F1CE27811006C6D87 /* ShowMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */; };
 		FA28DBCD1CDA6D3C00ED7429 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA28DBCC1CDA6D3C00ED7429 /* WatchConnectivity.framework */; };
 		FA28DBCF1CDA6D4A00ED7429 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA28DBCE1CDA6D4A00ED7429 /* WatchConnectivity.framework */; };
 		FA5B99C61CD931EF0036C8DD /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B99C51CD931EF0036C8DD /* DataStore.swift */; };
@@ -92,6 +93,7 @@
 		E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewController.swift; sourceTree = "<group>"; };
 		E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
 		E091711D1CE118E10070E150 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMarketViewController.swift; sourceTree = "<group>"; };
 		FA28DBCC1CDA6D3C00ED7429 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		FA28DBCE1CDA6D4A00ED7429 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		FA5B99C31CD9307A0036C8DD /* BitFreeze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BitFreeze.entitlements; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */,
 				E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */,
+				E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -340,7 +343,7 @@
 				TargetAttributes = {
 					FA9DD2AF1CD927230092BB40 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = BZS6V38E8B;
+						DevelopmentTeam = 8U854TQQ43;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -355,7 +358,7 @@
 					};
 					FA9DD2D01CD927230092BB40 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = BZS6V38E8B;
+						DevelopmentTeam = 8U854TQQ43;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -520,6 +523,7 @@
 				E091711E1CE118E10070E150 /* PersistencyManager.swift in Sources */,
 				E072F5271CE0E86A00AEBE73 /* CurrencyData.swift in Sources */,
 				FA9DD2B41CD927230092BB40 /* AppDelegate.swift in Sources */,
+				E0BF497F1CE27811006C6D87 /* ShowMarketViewController.swift in Sources */,
 				E072F52D1CE0FA8F00AEBE73 /* MarketTableViewController.swift in Sources */,
 				E072F5251CE0E84400AEBE73 /* MarketData.swift in Sources */,
 			);
@@ -670,10 +674,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "BitFreeze WatchKit Extension/BitFreeze WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BitFreeze WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipsumCorp.BitFreeze.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -687,10 +694,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "BitFreeze WatchKit Extension/BitFreeze WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BitFreeze WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipsumCorp.BitFreeze.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -736,10 +746,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BitFreeze/BitFreeze.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BitFreeze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipsumCorp.BitFreeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -749,10 +762,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BitFreeze/BitFreeze.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BitFreeze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipsumCorp.BitFreeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

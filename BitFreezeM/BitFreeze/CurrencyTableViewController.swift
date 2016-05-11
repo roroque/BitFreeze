@@ -16,7 +16,6 @@ class CurrencyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         MarketManager.sharedInstance.getAllData(){
             response in
             

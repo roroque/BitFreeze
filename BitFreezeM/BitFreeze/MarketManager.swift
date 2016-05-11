@@ -44,4 +44,28 @@ class MarketManager{
         }
     }
     
+    func getMarket(data: (currency: String, market: String), completionHandler: MarketData? -> ()){
+        
+        BitCoinAverageService().getCurrency(data.currency){
+            markets in
+            for (mkt,subJSON):(String, JSON)in markets{
+                if mkt == data.market{
+                    if let newExchange = MarketData(mkt,subJSON){
+                        completionHandler(newExchange)
+                        return
+                    }else{
+                        print("Falha ao parsear exchange: \(mkt)")
+                        completionHandler(nil)
+                        return
+                    }
+                    
+                }
+            }
+            
+            NSLog("Falha ao reconhecer tipo do mercado")
+            completionHandler(nil)
+        }
+
+    }
+    
 }

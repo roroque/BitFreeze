@@ -19,6 +19,17 @@ class MarketData: NSObject{
     var volume_btc: String
     var volume_percent: String
     
+    override init(){
+        marketName = "Empty"
+        display_URL = "Empty"
+        display_Name = "Empty"
+        ask = "Empty"
+        bid = "Empty"
+        last = "Empty"
+        volume_btc = "Empty"
+        volume_percent = "Empty"
+    }
+    
     init?(_ mktName: String, _ jsonMarket: JSON){
         
         guard let display_URL = jsonMarket["display_URL"].string else {

@@ -8,21 +8,30 @@
 
 import UIKit
 
+//variavel global para observer
+let changeMarketKey = "com.bitfreeze.changeMarketKey"
+
 class MarketTableViewController: UITableViewController {
     
+    
+    //MARK: Properties
     let cellIdentifier = "MarketTableViewCell"
 
     var currencyObject: CurrencyData?
     
-    //controle para selecionar somente uma linha da tabela
-    var selectedIndexPath: NSIndexPath? = NSIndexPath(forRow: 0, inSection: 0)
+    var loadedData: (currency: String, market: String) = ("","")
     
+    //controle para selecionar somente uma linha da tabela
+    var selectedIndexPath: NSIndexPath?
+    
+    
+    //MARK: Lifecycle & Delegations
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let data = PersistencyManager().loadCurrentMarket(){
-            
             NSLog("Achou algo guardado\n \(data)")
+            loadedData = data
             
         }else{
             
@@ -38,6 +47,13 @@ class MarketTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        
+        //verifica se mercado existe na tabela
+        if loadedData.currency == currencyObject?.currency{
+            if loadedData.market == currencyObject?.exchanges[indexPath.row].marketName{
+                selectedIndexPath = indexPath
+            }
+        }
         
         cell.textLabel?.text = currencyObject?.exchanges[indexPath.row].display_Name ?? "Fail"
         
@@ -59,27 +75,66 @@ class MarketTableViewController: UITableViewController {
             return
         }
         
-        let newCell = tableView.cellForRowAtIndexPath(indexPath)
-        if newCell?.accessoryType == UITableViewCellAccessoryType.None {
-            newCell?.accessoryType = UITableViewCellAccessoryType.Checkmark
-        }
-        
-        let oldCell = tableView.cellForRowAtIndexPath(selectedIndexPath!)
-        if oldCell?.accessoryType == UITableViewCellAccessoryType.Checkmark {
-            oldCell?.accessoryType = UITableViewCellAccessoryType.None
-        }
-        
-        selectedIndexPath = indexPath
-        
-        // Salva nova configuração
+        // Chama Alerta
         
         if let obj = currencyObject{
-            PersistencyManager().saveCurrentMarket(obj.currency, obj.exchanges[indexPath.row].marketName)
+            
+            showAllert(obj.exchanges[indexPath.row].marketName, index: indexPath){
+                response in
+                print(response)
+                
+                if response{
+                    print("Entrou")
+                    let newCell = tableView.cellForRowAtIndexPath(indexPath)
+                    if newCell?.accessoryType == UITableViewCellAccessoryType.None {
+                        newCell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+                    }
+                    
+                    
+                    if let index = self.selectedIndexPath{
+                        let oldCell = tableView.cellForRowAtIndexPath(index)
+                        if oldCell?.accessoryType == UITableViewCellAccessoryType.Checkmark {
+                            oldCell?.accessoryType = UITableViewCellAccessoryType.None
+                        }
+                    }
+                    
+                    self.loadedData.market = obj.exchanges[indexPath.row].marketName
+                    
+                    PersistencyManager().saveCurrentMarket(self.loadedData.currency, self.loadedData.market)
+                
+                    self.selectedIndexPath = indexPath
+
+                    self.notifyMarketChanged([obj.currency, obj.exchanges[indexPath.row].marketName])
+                    
+                }
+            }
+
         }else{
             NSLog("Impossivel armazenar novo mercado")
         }
+    }
+    
+    //MARK: Notification & Alert
+    func showAllert(market: String, index: NSIndexPath, completionAlert: (response: Bool)->()){
         
         
+        let alert = UIAlertController(title: "Exchange", message: "Change for \(market) ?", preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel){ action in
+            completionAlert(response: false)
+        }
+
+        let okAction = UIAlertAction(title: "OK", style: .Default){ action in
+            completionAlert(response: true)
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func notifyMarketChanged(newMarket: [String]){
+        NSNotificationCenter.defaultCenter().postNotificationName(changeMarketKey, object: self, userInfo: ["Data":newMarket])
     }
 
     
