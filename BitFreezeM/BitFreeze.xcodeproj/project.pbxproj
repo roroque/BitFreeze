@@ -346,11 +346,7 @@
 				TargetAttributes = {
 					FA9DD2AF1CD927230092BB40 = {
 						CreatedOnToolsVersion = 7.3;
-<<<<<<< Updated upstream
 						DevelopmentTeam = 8U854TQQ43;
-=======
-						DevelopmentTeam = EP442BQ3E9;
->>>>>>> Stashed changes
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -365,11 +361,7 @@
 					};
 					FA9DD2D01CD927230092BB40 = {
 						CreatedOnToolsVersion = 7.3;
-<<<<<<< Updated upstream
 						DevelopmentTeam = 8U854TQQ43;
-=======
-						DevelopmentTeam = EP442BQ3E9;
->>>>>>> Stashed changes
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -759,10 +751,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BitFreeze/BitFreeze.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-<<<<<<< Updated upstream
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-=======
->>>>>>> Stashed changes
 				INFOPLIST_FILE = BitFreeze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipsumCorp.BitFreeze;
@@ -778,10 +767,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BitFreeze/BitFreeze.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-<<<<<<< Updated upstream
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-=======
->>>>>>> Stashed changes
 				INFOPLIST_FILE = BitFreeze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipsumCorp.BitFreeze;
