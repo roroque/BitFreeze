@@ -1,5 +1,6 @@
 
 import UIKit
+import SwiftyJSON
 
 class ShowMarketViewController: UIViewController {
     
@@ -32,6 +33,8 @@ class ShowMarketViewController: UIViewController {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ShowMarketViewController.observerHandler(_:)), name: changeMarketKey, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ShowMarketViewController.observerHandlerBackground(_:)), name: newDataFromBackgroundKey, object: nil)
         
         if let loadedData = PersistencyManager().loadCurrentMarket(){
             data = loadedData
@@ -67,7 +70,7 @@ class ShowMarketViewController: UIViewController {
     
     private func loadLabels(){
         currencyLabel.text = data.currency
-        marketLabel.text = data.market
+        marketLabel.text = market.marketName
         lastLabel.text = market.last
         askLabel.text = market.ask
         bidLabel.text = market.bid
@@ -83,6 +86,29 @@ class ShowMarketViewController: UIViewController {
             dataChanged = true
         }
         
+    }
+    
+    
+    // Mudar lugar onde pega o nome do mercado
+    func observerHandlerBackground(notification: NSNotification){
+        if let newData = notification.userInfo as? Dictionary<String, AnyObject>{
+            if let mJSON = newData["newBackgroundData"]{
+                
+                if let marketFromBackground = MarketData(data.market, JSON(mJSON)){
+                    self.market = marketFromBackground
+                    loadLabels()
+                    
+                }else{
+                    print("Nao conseguiu tranformar json em market Data")
+                }
+                
+                
+            }else{
+                print("Chave nao encontrada")
+            }
+        }else{
+            print("erro no parse do json")
+        }
     }
     
     deinit{
@@ -110,7 +136,5 @@ class ShowMarketViewController: UIViewController {
         }
     }
     
-    func reloadDataFromBackground(){
-        
-    }
+
 }

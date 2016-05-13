@@ -10,7 +10,12 @@ import UIKit
 import SwiftyJSON
 import WatchConnectivity
 
-class ViewController: UIViewController,WCSessionDelegate {
+let newDataFromBackgroundKey = "data.Background"
+
+
+class ViewController: UINavigationController,WCSessionDelegate {
+    
+    
     
     let session = WCSession.defaultSession()
     let dataManager = DataStore()
@@ -83,7 +88,9 @@ class ViewController: UIViewController,WCSessionDelegate {
             let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
             let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
             let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
-           
+            
+            self.notifyMarketChanged(jsonObject[currency!][market!])
+
             self.session.sendMessage(applicationDict, replyHandler: { dict in
                 
                 print(dict)
@@ -91,9 +98,6 @@ class ViewController: UIViewController,WCSessionDelegate {
             }) { error in
                 print("error")
             }
-            
-            
-            
             
         }
 
@@ -130,7 +134,6 @@ class ViewController: UIViewController,WCSessionDelegate {
             reply(applicationDict)
         
             
-        
             
         }
         
@@ -149,12 +152,11 @@ class ViewController: UIViewController,WCSessionDelegate {
         
         
     }
+    
+    func notifyMarketChanged(marketDataJSON:JSON){
+                
+        NSNotificationCenter.defaultCenter().postNotificationName(newDataFromBackgroundKey, object: self, userInfo: ["newBackgroundData":marketDataJSON.rawValue])
+    }
    
-    
-    
-
-
-
-
 }
 

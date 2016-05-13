@@ -61,7 +61,7 @@ class CurrencyTableViewController: UITableViewController {
         
         // Não destaca celula quando selecionada
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        
+        cell.textLabel?.textColor = UIColor.whiteColor()
         return cell
         
     }
