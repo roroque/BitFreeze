@@ -19,9 +19,10 @@
                         </group>
                         <group width="1" alignment="center" id="hdO-A5-Xde">
                             <items>
-                                <label alignment="center" text="1790.00" textAlignment="left" id="c8O-JB-nBW">
+                                <label alignment="center" text="..." textAlignment="left" id="c8O-JB-nBW">
                                     <color key="textColor" red="0.035680230036593708" green="0.72129435086547145" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="33"/>
+                                    <variation key="device=watch42mm" text="..."/>
                                 </label>
                             </items>
                         </group>
@@ -39,15 +40,15 @@
                         </group>
                         <group width="1" alignment="left" id="x4M-Mn-lJG">
                             <items>
-                                <label width="100" alignment="center" text="1900.00" textAlignment="center" id="geS-mC-trD">
+                                <label width="100" alignment="center" text="..." textAlignment="center" id="geS-mC-trD">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                     <variation key="device=watch38mm" width="50"/>
-                                    <variation key="device=watch42mm" width="50"/>
+                                    <variation key="device=watch42mm" text="..." width="50"/>
                                 </label>
-                                <label width="100" alignment="center" text="1900.00" textAlignment="center" id="vw6-dg-p87">
+                                <label width="100" alignment="center" text="..." textAlignment="center" id="vw6-dg-p87">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                     <variation key="device=watch38mm" width="50"/>
-                                    <variation key="device=watch42mm" width="50"/>
+                                    <variation key="device=watch42mm" text="..." width="50"/>
                                 </label>
                             </items>
                         </group>

@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		20006FD5FFE70D9EA6C30AB2 /* Pods_BitFreeze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7E9AB38734E115B8030A2B /* Pods_BitFreeze.framework */; };
 		BA9C5D6E476E0FD6B0BCD373 /* Pods_BitFreeze_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B59DC1D60B22D52032280D /* Pods_BitFreeze_WatchKit_Extension.framework */; };
+		E0461D971CE658FC00EDA057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0461D961CE658FC00EDA057 /* Assets.xcassets */; };
+		E04D8E3C1CE3BF24000872F7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D8E3B1CE3BF24000872F7 /* Reachability.swift */; };
 		E072F5231CE0E82400AEBE73 /* MarketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5221CE0E82400AEBE73 /* MarketManager.swift */; };
 		E072F5251CE0E84400AEBE73 /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5241CE0E84400AEBE73 /* MarketData.swift */; };
 		E072F5271CE0E86A00AEBE73 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */; };
 		E072F52A1CE0E8CB00AEBE73 /* CurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */; };
 		E072F52D1CE0FA8F00AEBE73 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */; };
+		E07AE2421CE627A900A47DB5 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AE2411CE627A900A47DB5 /* CustomActivityIndicator.swift */; };
 		E091711E1CE118E10070E150 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091711D1CE118E10070E150 /* PersistencyManager.swift */; };
 		E0BF497F1CE27811006C6D87 /* ShowMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */; };
 		FA28DBCD1CDA6D3C00ED7429 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA28DBCC1CDA6D3C00ED7429 /* WatchConnectivity.framework */; };
@@ -23,7 +26,6 @@
 		FA9DD2B41CD927230092BB40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD2B31CD927230092BB40 /* AppDelegate.swift */; };
 		FA9DD2B61CD927230092BB40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD2B51CD927230092BB40 /* ViewController.swift */; };
 		FA9DD2B91CD927230092BB40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9DD2B71CD927230092BB40 /* Main.storyboard */; };
-		FA9DD2BB1CD927230092BB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9DD2BA1CD927230092BB40 /* Assets.xcassets */; };
 		FA9DD2BE1CD927230092BB40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9DD2BC1CD927230092BB40 /* LaunchScreen.storyboard */; };
 		FA9DD2C31CD927230092BB40 /* BitFreeze WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA9DD2C21CD927230092BB40 /* BitFreeze WatchKit App.app */; };
 		FA9DD2C91CD927230092BB40 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9DD2C71CD927230092BB40 /* Interface.storyboard */; };
@@ -87,11 +89,14 @@
 		821E0F24965631AEA7AF0036 /* Pods-BitFreeze WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitFreeze WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitFreeze WatchKit Extension/Pods-BitFreeze WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		93B59DC1D60B22D52032280D /* Pods_BitFreeze_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7E9AB38734E115B8030A2B /* Pods_BitFreeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitFreeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0461D961CE658FC00EDA057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E04D8E3B1CE3BF24000872F7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E072F5221CE0E82400AEBE73 /* MarketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketManager.swift; sourceTree = "<group>"; };
 		E072F5241CE0E84400AEBE73 /* MarketData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
 		E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 		E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewController.swift; sourceTree = "<group>"; };
 		E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
+		E07AE2411CE627A900A47DB5 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		E091711D1CE118E10070E150 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMarketViewController.swift; sourceTree = "<group>"; };
 		FA28DBCC1CDA6D3C00ED7429 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
@@ -103,7 +108,6 @@
 		FA9DD2B31CD927230092BB40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA9DD2B51CD927230092BB40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA9DD2B81CD927230092BB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA9DD2BA1CD927230092BB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA9DD2BD1CD927230092BB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA9DD2BF1CD927230092BB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA9DD2C21CD927230092BB40 /* BitFreeze WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitFreeze WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,8 @@
 				E072F5241CE0E84400AEBE73 /* MarketData.swift */,
 				E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */,
 				E091711D1CE118E10070E150 /* PersistencyManager.swift */,
+				E04D8E3B1CE3BF24000872F7 /* Reachability.swift */,
+				E0461D961CE658FC00EDA057 /* Assets.xcassets */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				FA9DD2B71CD927230092BB40 /* Main.storyboard */,
+				E07AE2411CE627A900A47DB5 /* CustomActivityIndicator.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -227,7 +234,6 @@
 				FA5B99C31CD9307A0036C8DD /* BitFreeze.entitlements */,
 				FA9DD2B31CD927230092BB40 /* AppDelegate.swift */,
 				FA9DD2B51CD927230092BB40 /* ViewController.swift */,
-				FA9DD2BA1CD927230092BB40 /* Assets.xcassets */,
 				FA9DD2BC1CD927230092BB40 /* LaunchScreen.storyboard */,
 				FA9DD2BF1CD927230092BB40 /* Info.plist */,
 				FA5B99C51CD931EF0036C8DD /* DataStore.swift */,
@@ -393,7 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9DD2BE1CD927230092BB40 /* LaunchScreen.storyboard in Resources */,
-				FA9DD2BB1CD927230092BB40 /* Assets.xcassets in Resources */,
+				E0461D971CE658FC00EDA057 /* Assets.xcassets in Resources */,
 				FA9DD2B91CD927230092BB40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +523,7 @@
 			files = (
 				FA9DD2B61CD927230092BB40 /* ViewController.swift in Sources */,
 				FA5B99C61CD931EF0036C8DD /* DataStore.swift in Sources */,
+				E04D8E3C1CE3BF24000872F7 /* Reachability.swift in Sources */,
 				E072F52A1CE0E8CB00AEBE73 /* CurrencyTableViewController.swift in Sources */,
 				FA9DD2F31CD927FB0092BB40 /* BitCoinAverageService.swift in Sources */,
 				E072F5231CE0E82400AEBE73 /* MarketManager.swift in Sources */,
@@ -526,6 +533,7 @@
 				E0BF497F1CE27811006C6D87 /* ShowMarketViewController.swift in Sources */,
 				E072F52D1CE0FA8F00AEBE73 /* MarketTableViewController.swift in Sources */,
 				E072F5251CE0E84400AEBE73 /* MarketData.swift in Sources */,
+				E07AE2421CE627A900A47DB5 /* CustomActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

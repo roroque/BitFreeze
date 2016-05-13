@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         application.setMinimumBackgroundFetchInterval(NSTimeInterval(60))
         
+        
+        self.window!.tintColor = UIColor.init(red: 16/255, green: 131/255, blue: 254/255, alpha: 1)
+        
         return true
     }
 

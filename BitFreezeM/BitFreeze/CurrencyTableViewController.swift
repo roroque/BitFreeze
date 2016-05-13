@@ -16,15 +16,36 @@ class CurrencyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MarketManager.sharedInstance.getAllData(){
-            response in
+        
+
+        // No connection alert
+        if Reachability.isConnectedToNetwork() == true {
             
-            if let resp = response as [CurrencyData]!{
-                self.currencies = resp
-                self.tableView.reloadData()
+            CustomActivityIndicator().showLoading()
+            
+            MarketManager.sharedInstance.getAllData(){
+                response in
+                
+                if let resp = response as [CurrencyData]!{
+                    self.currencies = resp
+                    self.tableView.reloadData()
+                }
+                
+                CustomActivityIndicator().hideLoading()
+                
             }
             
+            
+        }else{
+            let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(okAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
+
         
     }
     
@@ -40,7 +61,7 @@ class CurrencyTableViewController: UITableViewController {
         
         // Não destaca celula quando selecionada
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        
+        cell.textLabel?.textColor = UIColor.whiteColor()
         return cell
         
     }

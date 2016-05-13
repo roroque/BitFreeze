@@ -29,6 +29,8 @@ class MarketTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = currencyObject?.currency ?? ""
+        
         if let data = PersistencyManager().loadCurrentMarket(){
             NSLog("Achou algo guardado\n \(data)")
             loadedData = data
@@ -37,6 +39,7 @@ class MarketTableViewController: UITableViewController {
             
             NSLog("Nao ha nada guardado, guardar mercado default")
         }
+        
     }
     
     
@@ -63,6 +66,9 @@ class MarketTableViewController: UITableViewController {
         
         // Não destaca celula quando selecionada
         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        
+        
         
         return cell
         
@@ -99,6 +105,7 @@ class MarketTableViewController: UITableViewController {
                     }
                     
                     self.loadedData.market = obj.exchanges[indexPath.row].marketName
+                    self.loadedData.currency = obj.currency
                     
                     PersistencyManager().saveCurrentMarket(self.loadedData.currency, self.loadedData.market)
                 
