@@ -15,6 +15,7 @@
 		E072F5271CE0E86A00AEBE73 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */; };
 		E072F52A1CE0E8CB00AEBE73 /* CurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */; };
 		E072F52D1CE0FA8F00AEBE73 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */; };
+		E07AE2421CE627A900A47DB5 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07AE2411CE627A900A47DB5 /* CustomActivityIndicator.swift */; };
 		E091711E1CE118E10070E150 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091711D1CE118E10070E150 /* PersistencyManager.swift */; };
 		E0BF497F1CE27811006C6D87 /* ShowMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */; };
 		FA28DBCD1CDA6D3C00ED7429 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA28DBCC1CDA6D3C00ED7429 /* WatchConnectivity.framework */; };
@@ -94,6 +95,7 @@
 		E072F5261CE0E86A00AEBE73 /* CurrencyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 		E072F5291CE0E8CB00AEBE73 /* CurrencyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewController.swift; sourceTree = "<group>"; };
 		E072F52C1CE0FA8F00AEBE73 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
+		E07AE2411CE627A900A47DB5 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		E091711D1CE118E10070E150 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		E0BF497E1CE27811006C6D87 /* ShowMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMarketViewController.swift; sourceTree = "<group>"; };
 		FA28DBCC1CDA6D3C00ED7429 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FA9DD2B71CD927230092BB40 /* Main.storyboard */,
+				E07AE2411CE627A900A47DB5 /* CustomActivityIndicator.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				E0BF497F1CE27811006C6D87 /* ShowMarketViewController.swift in Sources */,
 				E072F52D1CE0FA8F00AEBE73 /* MarketTableViewController.swift in Sources */,
 				E072F5251CE0E84400AEBE73 /* MarketData.swift in Sources */,
+				E07AE2421CE627A900A47DB5 /* CustomActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

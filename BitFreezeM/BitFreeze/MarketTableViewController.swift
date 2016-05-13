@@ -37,6 +37,7 @@ class MarketTableViewController: UITableViewController {
             
             NSLog("Nao ha nada guardado, guardar mercado default")
         }
+        
     }
     
     
