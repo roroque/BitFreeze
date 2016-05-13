@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import WatchConnectivity
 
-class ViewController: UIViewController,WCSessionDelegate {
+class ViewController: UINavigationController,WCSessionDelegate {
     
     let session = WCSession.defaultSession()
     let dataManager = DataStore()
@@ -42,26 +42,14 @@ class ViewController: UIViewController,WCSessionDelegate {
         super.viewDidLoad()
 
         
-    
-     
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     
     
-    @IBAction func buttonPressed(sender: AnyObject) {
-        
-       // sendData()
-        
-    }
-    
     
     func backGroundSend(){
-        
-        print("hey ho")
-        
-        
+       
         let manager = BitCoinAverageService()
         manager.retrieveMarketsData { jsonObject in
             var market = self.dataManager.load("market") as? String
@@ -82,23 +70,27 @@ class ViewController: UIViewController,WCSessionDelegate {
             let askPartial = jsonObject[currency!][market!]["rates"]["ask"].stringValue
             let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
             let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
-            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!, "date" : NSDate()]
+            
+            
+            self.dataManager.saveDifferentData(applicationDict)
            
-            self.session.sendMessage(applicationDict, replyHandler: { dict in
+           
+            self.session.sendMessage([ "data" :  self.dataManager.loadData()!], replyHandler: { dict in
                 
                 print(dict)
                 
             }) { error in
-                print("error")
+                print("error background")
             }
             
-            
+          
+
             
             
         }
-
         
-        
+   
         
     }
     
@@ -126,8 +118,12 @@ class ViewController: UIViewController,WCSessionDelegate {
             let askPartial = jsonObject[currency!][market!]["rates"]["ask"].stringValue
             let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
             let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
-            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!]
-            reply(applicationDict)
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!, "date" : NSDate()]
+            
+            
+            self.dataManager.saveDifferentData(applicationDict)
+            
+            reply([ "data" :  self.dataManager.loadData()!])
         
             
         
@@ -144,11 +140,14 @@ class ViewController: UIViewController,WCSessionDelegate {
     
     
     func session(session: WCSession,didReceiveMessage message: [String : AnyObject],replyHandler: ([String : AnyObject]) -> Void){
-        
+      
+        print(message)
         sendData(replyHandler)
+
         
         
     }
+    
    
     
     

@@ -11,6 +11,7 @@ import Foundation
 import SwiftyJSON
 import WatchConnectivity
 import Alamofire
+import ClockKit
 
 
 
@@ -36,7 +37,6 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             session.activateSession()
             
         }
-        
         // Configure interface objects here.
     }
 
@@ -48,16 +48,21 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         
         
         
-        
-        session.sendMessage(["oi" : "oi"], replyHandler: { dict in
+        if session.reachable {
+
+            session.sendMessage(["request": "watch"], replyHandler: { dict in
+                
+                
+                    self.updateInterface(dict)
+                
+                }) { error in
+                    print(error)
+                    print("error activation")
+            }
+        }else{
             
-            
-                self.updateInterface(dict)
-            
-            }) { error in
-                print("error")
+            print("device not reacheable")
         }
-        
         
         
     }
@@ -67,17 +72,18 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.didDeactivate()
     }
     
+    /*
     func session(session: WCSession,didReceiveApplicationContext applicationContext: [String : AnyObject]){
 
        
-        //updateInterface(applicationContext)
+        updateInterface(applicationContext)
         
         
         
         
     }
     
-    
+    */
     func loadInterface(){
 //        print ("voltando")
 //        
@@ -95,9 +101,13 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     }
     
     
-    func updateInterface( dataDict :[String : AnyObject]){
+    func updateInterface( dataVector :[String : AnyObject]){
         
-        print("me chamaram")
+        print("update interfaco")
+        
+        
+        let vector = dataVector["data"] as! [[String : NSObject]]
+        let dataDict = vector.last!
         
         let askPartial = dataDict["ask"] as! String
         let bidPartial = dataDict["bid"] as! String
@@ -118,17 +128,30 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         bid.setText(bidPartial)
         price.setText(pricePartial)
         
+     
+        dataManager.save("data", object: vector)
+        
+       
+        let server=CLKComplicationServer.sharedInstance()
+        
+        for comp in (server.activeComplications)! {
+            server.reloadTimelineForComplication(comp)
+        }
+        
+        
     }
     
-    
+  
     
     func session(session: WCSession,didReceiveMessage message: [String : AnyObject],replyHandler: ([String : AnyObject]) -> Void){
         
         updateInterface(message)
-        replyHandler(["hey" : "lets go"])
+        replyHandler(["hey": "ho"])
         
         
     }
+    
+    
     
     
     

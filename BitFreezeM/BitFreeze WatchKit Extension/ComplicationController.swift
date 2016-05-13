@@ -7,25 +7,40 @@
 //
 
 import ClockKit
+import WatchConnectivity
+
 
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
+    
+    
+    override init() {
+        super.init()
+       
+    }
+    
+    
+    var data : [[String : NSObject]] = []
+    
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
-       // handler([.Forward, .Backward])
         handler([.Backward])
     }
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
         let currentDate = NSDate()
         let beginDate = currentDate.dateByAddingTimeInterval(NSTimeInterval(-24 * 60 * 60))
+     
         handler(beginDate)
+        
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
         let currentDate = NSDate()
+        print("end")
+        print(currentDate)
         
         handler(currentDate)
     }
@@ -38,10 +53,15 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
         // Call the handler with the current timeline entry
+      
         
         if complication.family == .ModularLarge {
-          
-            let entry = createTimeLineEntry("nome do mercado", price: "----", currency: "BRL", ask: "----", bid: "----", date: NSDate())
+            
+            data = DataStore().loadData()!
+            let current = data.last
+            
+            
+            let entry = createTimeLineEntry(current!["market"] as! String, price: current!["price"] as! String, currency: current!["currency"] as! String, ask: current!["ask"] as! String, bid: current!["bid"] as! String, date: NSDate())
             
             handler(entry)
         } else {
@@ -53,24 +73,27 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries prior to the given date
         
+        
+        
         if complication.family == .ModularLarge {
+            //limite de 100
+            //100 ultimas entradas falando que a date delas foi de minutos atras?
+            //passar um vetor que possui o date tambem??
             
             var timeLineEntryArray = [CLKComplicationTimelineEntry]()
             
-            var nextDate = NSDate(timeIntervalSinceNow: -24 * 60 * 60)
             
-            for index in 1...24*60 {
+            for item in data {
                 
-               
-                
-                let entry = createTimeLineEntry("mercado antigo", price: "antigo", currency: "BRL", ask: "antigo", bid: "antigo", date: nextDate)
-                
+                let oldDate  = item["date"] as! NSDate
+                let realDate = oldDate//.dateByAddingTimeInterval(-3 * 60 * 60)
+                let entry = createTimeLineEntry(item["market"] as! String, price: item["price"] as! String, currency: item["currency"] as! String, ask: item["ask"] as! String, bid: item["bid"] as! String, date: realDate)
                 timeLineEntryArray.append(entry)
                 
-                nextDate = nextDate.dateByAddingTimeInterval(60)
+                
             }
             
-            
+           
         
             handler(timeLineEntryArray)
 
@@ -89,7 +112,9 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getNextRequestedUpdateDateWithHandler(handler: (NSDate?) -> Void) {
         // Call the handler with the date when you would next like to be given the opportunity to update your complication content
-        handler(NSDate(timeIntervalSinceNow: 5*60));
+        
+        print("sup")
+        handler(NSDate(timeIntervalSinceNow: 60));
     }
     
     //MARK : - Functions
@@ -101,7 +126,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         template.headerTextProvider.tintColor = UIColor(colorLiteralRed: 9/255, green: 184/255, blue: 255/255, alpha: 1)
         
         template.body1TextProvider = CLKSimpleTextProvider(text: price + " " + currency)
-        template.body2TextProvider = CLKSimpleTextProvider(text: "A:" + ask + "   B:" + bid)
+        template.body2TextProvider = CLKSimpleTextProvider(text: "A:" + ask + "  B:" + bid)
         
         template.tintColor = UIColor(colorLiteralRed: 9/255, green: 184/255, blue: 255/255, alpha: 1)
 
@@ -150,5 +175,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         handler(template)
         
         }
+
+    
     
 }
