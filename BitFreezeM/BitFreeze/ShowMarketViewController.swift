@@ -11,7 +11,7 @@ class ShowMarketViewController: UIViewController {
     @IBOutlet weak var currencyLabel: UILabel!
     
     // Valores default
-    private var data:(currency: String, market: String) = ("USD", "bitex")
+    private var data:(currency: String, market: String) = ("BRL", "mercado")
     private var market = MarketData()
     private var dataChanged = false
     

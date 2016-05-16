@@ -353,7 +353,7 @@
 						DevelopmentTeam = BZS6V38E8B;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -368,7 +368,7 @@
 						DevelopmentTeam = BZS6V38E8B;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -683,7 +683,6 @@
 			baseConfigurationReference = 821E0F24965631AEA7AF0036 /* Pods-BitFreeze WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "BitFreeze WatchKit Extension/BitFreeze WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BitFreeze WatchKit Extension/Info.plist";
@@ -703,7 +702,6 @@
 			baseConfigurationReference = 3FD5A550D78E1BABD266244F /* Pods-BitFreeze WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "BitFreeze WatchKit Extension/BitFreeze WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BitFreeze WatchKit Extension/Info.plist";
@@ -755,7 +753,6 @@
 			baseConfigurationReference = 334FEE9620FDF212DB18539C /* Pods-BitFreeze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BitFreeze/BitFreeze.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BitFreeze/Info.plist;
@@ -772,7 +769,6 @@
 			baseConfigurationReference = 25C3A406A25D02050B6D957A /* Pods-BitFreeze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BitFreeze/BitFreeze.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BitFreeze/Info.plist;
