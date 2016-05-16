@@ -14,7 +14,8 @@ import SwiftyJSON
 
 class DataStore {
     
-    let userDefaults = NSUserDefaults(suiteName: "group.ipsumcorp.bit.freeze")!
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+
 
     
     func save(key : String,object : NSObject){
