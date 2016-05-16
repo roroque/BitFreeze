@@ -85,7 +85,7 @@ class MarketTableViewController: UITableViewController {
         
         if let obj = currencyObject{
             
-            showAllert(obj.exchanges[indexPath.row].marketName, index: indexPath){
+            showAlert(obj.exchanges[indexPath.row].marketName, index: indexPath){
                 response in
                 print(response)
                 
@@ -108,16 +108,14 @@ class MarketTableViewController: UITableViewController {
                     self.loadedData.currency = obj.currency
                     
                     PersistencyManager().saveCurrentMarket(self.loadedData.currency, self.loadedData.market)
-                    //updates market on watch realTime
-                    
-                    NSNotificationCenter.defaultCenter().postNotificationName(newMarketCurrency, object: self, userInfo: nil)
 
-                    
-                    
                     
                     self.selectedIndexPath = indexPath
 
                     self.notifyMarketChanged([obj.currency, obj.exchanges[indexPath.row].marketName])
+                    
+                    // Voltar para o menu principal
+                    self.navigationController?.popToRootViewControllerAnimated(true)
                     
                 }
             }
@@ -128,7 +126,7 @@ class MarketTableViewController: UITableViewController {
     }
     
     //MARK: Notification & Alert
-    func showAllert(market: String, index: NSIndexPath, completionAlert: (response: Bool)->()){
+    func showAlert(market: String, index: NSIndexPath, completionAlert: (response: Bool)->()){
         
         
         let alert = UIAlertController(title: "Exchange", message: "Change for \(market) ?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -148,6 +146,11 @@ class MarketTableViewController: UITableViewController {
     
     func notifyMarketChanged(newMarket: [String]){
         NSNotificationCenter.defaultCenter().postNotificationName(changeMarketKey, object: self, userInfo: ["Data":newMarket])
+        
+        
+        //updates market on watch realTime
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(newMarketCurrency, object: self, userInfo: nil)
     }
 
     
