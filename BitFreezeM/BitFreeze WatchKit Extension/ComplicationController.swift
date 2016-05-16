@@ -61,11 +61,29 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let current = data.last
             
             
-            let entry = createTimeLineEntry(current!["market"] as! String, price: current!["price"] as! String, currency: current!["currency"] as! String, ask: current!["ask"] as! String, bid: current!["bid"] as! String, date: NSDate())
+            let entry = createTimeLineEntryLarge(current!["market"] as! String, price: current!["price"] as! String, currency: current!["currency"] as! String, ask: current!["ask"] as! String, bid: current!["bid"] as! String, date: NSDate())
             
             handler(entry)
         } else {
-            handler(nil)
+            
+            if complication.family == .ModularSmall {
+                
+                data = DataStore().loadData()!
+                let current = data.last
+                
+                
+                let entry = createTimeLineEntrySmall(current!["market"] as! String, price: current!["price"] as! String, currency: current!["currency"] as! String, ask: current!["ask"] as! String, bid: current!["bid"] as! String, date: NSDate())
+                
+                handler(entry)
+                
+                
+            }else{
+                
+                handler(nil)
+
+                
+            }
+            
         }
         
     }
@@ -87,7 +105,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                 
                 let oldDate  = item["date"] as! NSDate
                 let realDate = oldDate//.dateByAddingTimeInterval(-3 * 60 * 60)
-                let entry = createTimeLineEntry(item["market"] as! String, price: item["price"] as! String, currency: item["currency"] as! String, ask: item["ask"] as! String, bid: item["bid"] as! String, date: realDate)
+                let entry = createTimeLineEntryLarge(item["market"] as! String, price: item["price"] as! String, currency: item["currency"] as! String, ask: item["ask"] as! String, bid: item["bid"] as! String, date: realDate)
                 timeLineEntryArray.append(entry)
                 
                 
@@ -98,7 +116,31 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             handler(timeLineEntryArray)
 
             } else {
-            handler(nil)
+            
+            if complication.family == .ModularSmall {
+                
+                var timeLineEntryArray = [CLKComplicationTimelineEntry]()
+                
+                
+                for item in data {
+                    
+                    let oldDate  = item["date"] as! NSDate
+                    let realDate = oldDate//.dateByAddingTimeInterval(-3 * 60 * 60)
+                    let entry = createTimeLineEntrySmall(item["market"] as! String, price: item["price"] as! String, currency: item["currency"] as! String, ask: item["ask"] as! String, bid: item["bid"] as! String, date: realDate)
+                    timeLineEntryArray.append(entry)
+                    
+                    
+                }
+                
+                
+                
+                handler(timeLineEntryArray)
+                
+                
+            }else{
+            
+                handler(nil)
+            }
         }
 
     }
@@ -119,7 +161,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     //MARK : - Functions
     
-    func createTimeLineEntry(marketName: String, price: String,currency : String,ask: String,bid: String, date: NSDate) -> CLKComplicationTimelineEntry {
+    func createTimeLineEntryLarge(marketName: String, price: String,currency : String,ask: String,bid: String, date: NSDate) -> CLKComplicationTimelineEntry {
         
         let template = CLKComplicationTemplateModularLargeStandardBody()
         template.headerTextProvider = CLKSimpleTextProvider(text: marketName,shortText: marketName)
@@ -136,6 +178,26 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         return(entry)
     }
+    
+    func createTimeLineEntrySmall(marketName: String, price: String,currency : String,ask: String,bid: String, date: NSDate) -> CLKComplicationTimelineEntry {
+        
+        let template = CLKComplicationTemplateModularSmallStackText()
+        template.line1TextProvider = CLKSimpleTextProvider(text: currency,shortText: currency)
+        //template.line1TextProvider
+        template.line1TextProvider.tintColor = UIColor(colorLiteralRed: 9/255, green: 184/255, blue: 255/255, alpha: 1)
+        
+        template.line2TextProvider = CLKSimpleTextProvider(text: price , shortText: price.componentsSeparatedByString(".")[0])
+        
+        template.tintColor = UIColor(colorLiteralRed: 9/255, green: 184/255, blue: 255/255, alpha: 1)
+        
+        
+        
+        let entry = CLKComplicationTimelineEntry(date: date,
+                                                 complicationTemplate: template)
+        
+        return(entry)
+    }
+    
     
     
     // MARK: - Placeholder Templates

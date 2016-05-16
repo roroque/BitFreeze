@@ -72,7 +72,9 @@ class ViewController: UINavigationController,WCSessionDelegate {
             let askPartial = jsonObject[data.currency][data.market]["rates"]["ask"].stringValue
             let bidPartial = jsonObject[data.currency][data.market]["rates"]["bid"].stringValue
             let pricePartial = jsonObject[data.currency][data.market]["rates"]["last"].stringValue
-            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : data.market, "currency" : data.currency, "date" : NSDate()]
+            let marketName = jsonObject[data.currency][data.market]["display_name"].stringValue
+
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : marketName, "currency" : data.currency, "date" : NSDate()]
             self.notifyMarketChanged(jsonObject[data.currency][data.market])
 
             
@@ -126,7 +128,6 @@ class ViewController: UINavigationController,WCSessionDelegate {
             
             
             
-            self.dataManager.saveDifferentData(applicationDict)
             self.dataManager.saveDifferentData(applicationDict)
             
             reply([ "data" :  self.dataManager.loadData()!])

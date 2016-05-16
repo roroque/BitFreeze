@@ -88,6 +88,13 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         bid.setText(bidPartial)
         price.setText(pricePartial)
         currency.setText(currencyPartial)
+        self.setTitle(marketPartial)
+        
+        let server=CLKComplicationServer.sharedInstance()
+
+        for comp in (server.activeComplications)! {
+            server.reloadTimelineForComplication(comp)
+        }
         
     }
     
@@ -120,7 +127,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         ask.setText(askPartial)
         bid.setText(bidPartial)
         currency.setText(currencyPartial)
-
+        self.setTitle(marketPartial)
         price.setText(pricePartial)
         
      

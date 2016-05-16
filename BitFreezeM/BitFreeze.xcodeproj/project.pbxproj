@@ -350,7 +350,7 @@
 				TargetAttributes = {
 					FA9DD2AF1CD927230092BB40 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8U854TQQ43;
+						DevelopmentTeam = BZS6V38E8B;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -365,7 +365,7 @@
 					};
 					FA9DD2D01CD927230092BB40 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8U854TQQ43;
+						DevelopmentTeam = BZS6V38E8B;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
