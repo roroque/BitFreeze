@@ -70,7 +70,7 @@ class ShowMarketViewController: UIViewController {
     
     private func loadLabels(){
         currencyLabel.text = data.currency
-        marketLabel.text = market.marketName
+        marketLabel.text = market.display_Name
         lastLabel.text = market.last
         askLabel.text = market.ask
         bidLabel.text = market.bid

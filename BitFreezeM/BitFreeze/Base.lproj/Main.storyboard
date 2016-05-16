@@ -3,8 +3,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -85,53 +88,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mercado Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctb-ad-9BO">
-                                <rect key="frame" x="162" y="99" width="276" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercado Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctb-ad-9BO">
+                                <rect key="frame" x="171" y="84" width="258" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-yI-txl">
+                                <rect key="frame" x="126" y="354" width="48.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-Yq-yZR">
+                                <rect key="frame" x="428" y="354" width="43" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1600.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV7-nr-kxl">
+                                <rect key="frame" x="411" y="390" width="77" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1700.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGI-v3-ys1">
-                                <rect key="frame" x="215" y="224" width="279" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-HQ-iYo">
+                                <rect key="frame" x="112" y="392" width="77" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1700.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGI-v3-ys1">
+                                <rect key="frame" x="217" y="217" width="167" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" red="0.062745098039215685" green="0.51372549019607838" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BRL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtZ-by-SpY">
-                                <rect key="frame" x="366" y="185" width="49" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtZ-by-SpY">
+                                <rect key="frame" x="348" y="200" width="36" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bitcoin-logo-cyan" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-hf-Km0">
-                                <rect key="frame" x="51" y="187" width="116" height="95"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin-logo-cyan" translatesAutoresizingMaskIntoConstraints="NO" id="S8n-hU-HG7">
+                                <rect key="frame" x="20" y="153" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="LIh-Xr-Ke1"/>
+                                    <constraint firstAttribute="width" secondItem="S8n-hU-HG7" secondAttribute="height" multiplier="1:1" id="zag-kQ-PKe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LIh-Xr-Ke1"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-yI-txl">
-                                <rect key="frame" x="187" y="329" width="72" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bid:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-Yq-yZR">
-                                <rect key="frame" x="342" y="329" width="72" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1600.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV7-nr-kxl">
-                                <rect key="frame" x="317" y="389" width="123" height="59"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1800.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-HQ-iYo">
-                                <rect key="frame" x="162" y="389" width="123" height="59"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7JX-yI-txl" firstAttribute="centerX" secondItem="GPc-B6-AjD" secondAttribute="centerX" multiplier="50%" id="5e4-J6-1fE"/>
+                            <constraint firstItem="ddn-Yq-yZR" firstAttribute="top" secondItem="IkL-tP-g4J" secondAttribute="bottom" constant="290" id="8bK-2b-Y2M"/>
+                            <constraint firstItem="aV7-nr-kxl" firstAttribute="centerX" secondItem="ddn-Yq-yZR" secondAttribute="centerX" id="EjW-fj-2zU"/>
+                            <constraint firstItem="ddn-Yq-yZR" firstAttribute="centerY" secondItem="7JX-yI-txl" secondAttribute="centerY" id="F6o-z7-ABW"/>
+                            <constraint firstItem="Ctb-ad-9BO" firstAttribute="top" secondItem="IkL-tP-g4J" secondAttribute="bottom" constant="20" id="L0a-4b-6VN"/>
+                            <constraint firstItem="Sbd-HQ-iYo" firstAttribute="top" secondItem="7JX-yI-txl" secondAttribute="bottom" constant="8" symbolic="YES" id="QIT-EW-Ojd"/>
+                            <constraint firstItem="S8n-hU-HG7" firstAttribute="width" secondItem="GPc-B6-AjD" secondAttribute="width" multiplier="20%" id="Ruo-8x-DGg"/>
+                            <constraint firstItem="S8n-hU-HG7" firstAttribute="centerY" secondItem="HGI-v3-ys1" secondAttribute="centerY" id="TDT-1T-7Pf"/>
+                            <constraint firstItem="ddn-Yq-yZR" firstAttribute="centerX" secondItem="GPc-B6-AjD" secondAttribute="centerX" multiplier="150%" id="WIQ-Jq-lj2"/>
+                            <constraint firstItem="HGI-v3-ys1" firstAttribute="top" secondItem="Ctb-ad-9BO" secondAttribute="bottom" constant="90" id="ZNe-yO-Hte"/>
+                            <constraint firstItem="HGI-v3-ys1" firstAttribute="centerX" secondItem="GPc-B6-AjD" secondAttribute="centerX" id="gAQ-pM-FvE"/>
+                            <constraint firstItem="7JX-yI-txl" firstAttribute="top" secondItem="HGI-v3-ys1" secondAttribute="bottom" constant="81" id="hGr-62-FRV"/>
+                            <constraint firstItem="S8n-hU-HG7" firstAttribute="top" secondItem="Ctb-ad-9BO" secondAttribute="bottom" constant="26" id="hrl-XY-qfg"/>
+                            <constraint firstItem="aV7-nr-kxl" firstAttribute="top" secondItem="ddn-Yq-yZR" secondAttribute="bottom" constant="6" id="ix0-2T-g4a"/>
+                            <constraint firstItem="Sbd-HQ-iYo" firstAttribute="centerX" secondItem="7JX-yI-txl" secondAttribute="centerX" id="mtv-zq-skB"/>
+                            <constraint firstItem="mtZ-by-SpY" firstAttribute="trailing" secondItem="HGI-v3-ys1" secondAttribute="trailing" id="ohZ-vc-hFa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="S8n-hU-HG7" secondAttribute="leading" id="rXo-cb-KNd"/>
+                            <constraint firstItem="HGI-v3-ys1" firstAttribute="top" secondItem="mtZ-by-SpY" secondAttribute="bottom" constant="-7" id="wxr-3m-RQh"/>
+                            <constraint firstItem="Ctb-ad-9BO" firstAttribute="centerX" secondItem="GPc-B6-AjD" secondAttribute="centerX" id="xFM-jq-swB"/>
+                            <constraint firstItem="aV7-nr-kxl" firstAttribute="baseline" secondItem="Sbd-HQ-iYo" secondAttribute="firstBaseline" id="zl1-d4-4Fj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TDT-1T-7Pf"/>
+                                <exclude reference="hGr-62-FRV"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="BitFreeze" id="jXG-bv-yDG">
                         <barButtonItem key="rightBarButtonItem" image="conf" id="o4p-de-NfW">
