@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20006FD5FFE70D9EA6C30AB2 /* Pods_BitFreeze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7E9AB38734E115B8030A2B /* Pods_BitFreeze.framework */; };
+		2A162AE11CEA3D1B009E0969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9DD2CA1CD927230092BB40 /* Assets.xcassets */; };
 		BA9C5D6E476E0FD6B0BCD373 /* Pods_BitFreeze_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B59DC1D60B22D52032280D /* Pods_BitFreeze_WatchKit_Extension.framework */; };
 		E0461D971CE658FC00EDA057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0461D961CE658FC00EDA057 /* Assets.xcassets */; };
 		E04D8E3C1CE3BF24000872F7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D8E3B1CE3BF24000872F7 /* Reachability.swift */; };
@@ -400,6 +401,7 @@
 			files = (
 				FA9DD2BE1CD927230092BB40 /* LaunchScreen.storyboard in Resources */,
 				E0461D971CE658FC00EDA057 /* Assets.xcassets in Resources */,
+				2A162AE11CEA3D1B009E0969 /* Assets.xcassets in Resources */,
 				FA9DD2B91CD927230092BB40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
