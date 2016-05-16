@@ -108,7 +108,13 @@ class MarketTableViewController: UITableViewController {
                     self.loadedData.currency = obj.currency
                     
                     PersistencyManager().saveCurrentMarket(self.loadedData.currency, self.loadedData.market)
-                
+                    //updates market on watch realTime
+                    
+                    NSNotificationCenter.defaultCenter().postNotificationName(newMarketCurrency, object: self, userInfo: nil)
+
+                    
+                    
+                    
                     self.selectedIndexPath = indexPath
 
                     self.notifyMarketChanged([obj.currency, obj.exchanges[indexPath.row].marketName])

@@ -13,6 +13,8 @@ import WatchConnectivity
 
 let newDataFromBackgroundKey = "data.Background"
 
+let newMarketCurrency = "newMarketCurrency"
+
 
 class ViewController: UINavigationController,WCSessionDelegate {
     
@@ -45,6 +47,8 @@ class ViewController: UINavigationController,WCSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.observerHandler(_:)), name: newMarketCurrency, object: nil)
 
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -55,46 +59,44 @@ class ViewController: UINavigationController,WCSessionDelegate {
     
     func backGroundSend(){
        
+        var data = (currency : "BRL", market : "mercado")
+        
         let manager = BitCoinAverageService()
         manager.retrieveMarketsData { jsonObject in
-            var market = self.dataManager.load("market") as? String
             
-            if (market == nil){
+            if let aux = PersistencyManager().loadCurrentMarket(){
+             
+                data = aux
                 
-                market = "mercado"
             }
-            
-            var currency = self.dataManager.load("currency") as? String
-            
-            if (currency == nil){
-                
-                currency = "BRL"
-            }
-            
-            
-            let askPartial = jsonObject[currency!][market!]["rates"]["ask"].stringValue
-            let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
-            let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
-            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!, "date" : NSDate()]
-            self.notifyMarketChanged(jsonObject[currency!][market!])
+            let askPartial = jsonObject[data.currency][data.market]["rates"]["ask"].stringValue
+            let bidPartial = jsonObject[data.currency][data.market]["rates"]["bid"].stringValue
+            let pricePartial = jsonObject[data.currency][data.market]["rates"]["last"].stringValue
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : data.market, "currency" : data.currency, "date" : NSDate()]
+            self.notifyMarketChanged(jsonObject[data.currency][data.market])
 
             
             
             self.dataManager.saveDifferentData(applicationDict)
             
            
-           
-            self.session.sendMessage([ "data" :  self.dataManager.loadData()!], replyHandler: { dict in
+            if self.session.reachable{
+                self.session.sendMessage([ "data" :  self.dataManager.loadData()!], replyHandler: { dict in
 
+                    
+                    print(dict)
+                    
+                }) { error in
+                    print(error)
+                    print("error background")
+                }
                 
-                print(dict)
-                
-            }) { error in
-                print("error background")
             }
             
-
+            
         }
+
+        
         
    
         
@@ -104,29 +106,27 @@ class ViewController: UINavigationController,WCSessionDelegate {
     
     func sendData(reply : (([String : AnyObject]) -> Void)){
         
+        var data = (currency : "BRL", market : "mercado")
+        
         let manager = BitCoinAverageService()
         manager.retrieveMarketsData { jsonObject in
-            var market = self.dataManager.load("market") as? String
             
-            if (market == nil){
+            if let aux = PersistencyManager().loadCurrentMarket(){
                 
-                market = "mercado"
-            }
-            
-            var currency = self.dataManager.load("currency") as? String
-            
-            if (currency == nil){
+                data = aux
                 
-                currency = "BRL"
             }
+            let askPartial = jsonObject[data.currency][data.market]["rates"]["ask"].stringValue
+            print(jsonObject)
+            let bidPartial = jsonObject[data.currency][data.market]["rates"]["bid"].stringValue
+            let pricePartial = jsonObject[data.currency][data.market]["rates"]["last"].stringValue
+            let marketName = jsonObject[data.currency][data.market]["display_name"].stringValue
+            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : marketName, "currency" : data.currency, "date" : NSDate()]
+            self.notifyMarketChanged(jsonObject[data.currency][data.market])
             
             
-            let askPartial = jsonObject[currency!][market!]["rates"]["ask"].stringValue
-            let bidPartial = jsonObject[currency!][market!]["rates"]["bid"].stringValue
-            let pricePartial = jsonObject[currency!][market!]["rates"]["last"].stringValue
-            let applicationDict = ["ask" : askPartial,"bid" : bidPartial, "price" : pricePartial,"market" : market!, "currency" : currency!, "date" : NSDate()]
             
-            
+            self.dataManager.saveDifferentData(applicationDict)
             self.dataManager.saveDifferentData(applicationDict)
             
             reply([ "data" :  self.dataManager.loadData()!])
@@ -152,12 +152,26 @@ class ViewController: UINavigationController,WCSessionDelegate {
         
         
     }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
     
     func notifyMarketChanged(marketDataJSON:JSON){
                 
         NSNotificationCenter.defaultCenter().postNotificationName(newDataFromBackgroundKey, object: self, userInfo: ["newBackgroundData":marketDataJSON.rawValue])
     }
+    
+    func observerHandler(notification: NSNotification){
+       
+        self.backGroundSend()
+        
+        
+    }
+    
+    
+    
    
 }
 

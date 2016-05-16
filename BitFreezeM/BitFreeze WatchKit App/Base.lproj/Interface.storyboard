@@ -56,6 +56,7 @@
                     <connections>
                         <outlet property="ask" destination="geS-mC-trD" id="0ND-u0-zdx"/>
                         <outlet property="bid" destination="vw6-dg-p87" id="GEZ-Ms-oqd"/>
+                        <outlet property="currency" destination="1Ya-PN-2g1" id="lPn-aM-9He"/>
                         <outlet property="price" destination="c8O-JB-nBW" id="xS6-kV-MtP"/>
                     </connections>
                 </controller>

@@ -22,6 +22,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     let dataManager = DataStore()
 
 
+    @IBOutlet var currency: WKInterfaceLabel!
 
     @IBOutlet var ask: WKInterfaceLabel!
 
@@ -72,31 +73,21 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.didDeactivate()
     }
     
-    /*
-    func session(session: WCSession,didReceiveApplicationContext applicationContext: [String : AnyObject]){
 
-       
-        updateInterface(applicationContext)
-        
-        
-        
-        
-    }
-    
-    */
     func loadInterface(){
-//        print ("voltando")
-//        
-//        let askPartial = dataManager.load("ask") as! String
-//        let bidPartial = dataManager.load("bid") as! String
-//        let pricePartial = dataManager.load("price") as! String
-//        let marketPartial = dataManager.load("market") as! String
-//        let currencyPartial = dataManager.load("currency") as! String
-//        
-//        
-//        ask.setText(askPartial)
-//        bid.setText(bidPartial)
-//        price.setText(pricePartial)
+        print ("voltando")
+        
+        let askPartial = dataManager.load("ask") as! String
+        let bidPartial = dataManager.load("bid") as! String
+        let pricePartial = dataManager.load("price") as! String
+        let marketPartial = dataManager.load("market") as! String
+        let currencyPartial = dataManager.load("currency") as! String
+        
+        
+        ask.setText(askPartial)
+        bid.setText(bidPartial)
+        price.setText(pricePartial)
+        currency.setText(currencyPartial)
         
     }
     
@@ -115,6 +106,8 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         let marketPartial = dataDict["market"] as! String
         let currencyPartial = dataDict["currency"] as! String
         
+        print(marketPartial)
+        
         
         dataManager.save("ask", object: askPartial)
         dataManager.save("bid", object: bidPartial)
@@ -126,6 +119,8 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         
         ask.setText(askPartial)
         bid.setText(bidPartial)
+        currency.setText(currencyPartial)
+
         price.setText(pricePartial)
         
      
